@@ -1,8 +1,25 @@
-# React + Vite
+# Site Web Animal Sans Toi...t
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Technos/languages utilisés : 
+- React
+- Vite
+- Javascript
+- Node
+- Express
+- Tailwind
+- Figma
 
-Currently, two official plugins are available:
+Outils organisationnels: 
+- Jira
+- Google Doc
+- Serveur Discord
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Objectif: 
+Refaire le site de Animal Sans Toi...t côté client. Le site actuel est codé en PHP et a plus de 15 ans (non responsive, design daté). Le display de certains éléments est dynamique, basé sur une DB (animaux à adopter, posts FB,...). Le client a également une application de gestion qui lui permet de notamment interagir avec la DB. Cette application, ainsi que la DB resteront tels quel.
+Nous devons donc faire en sorte que le site communique et utilise des display automatiques en fonction des éléments présents dans la DB.
+
+
+
+
+
+
