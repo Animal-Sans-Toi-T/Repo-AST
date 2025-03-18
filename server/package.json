@@ -1,0 +1,17 @@
+{
+  "name": "refuge",
+  "version": "1.0.0",
+  "description": "Backend refuge",
+  "main": "app.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "author": "FredF",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "joi": "^17.13.3",
+    "mariadb": "^3.4.0"
+  }
+}
