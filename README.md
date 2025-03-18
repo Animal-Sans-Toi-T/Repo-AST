@@ -13,6 +13,7 @@
 - Jira
 - Google Doc
 - Serveur Discord
+- GitFlow WorkFlow (Branche Master sur laquelle on push après un review de tout le monde, branche Dev sur laquelle on va créer des branches Features par ticket)
 
 ## Objectif: 
 Refaire le site de Animal Sans Toi...t côté client. Le site actuel est codé en PHP et a plus de 15 ans (non responsive, design daté). Le display de certains éléments est dynamique, basé sur une DB (animaux à adopter, posts FB,...). Le client a également une application de gestion qui lui permet de notamment interagir avec la DB. Cette application, ainsi que la DB resteront tels quel.
