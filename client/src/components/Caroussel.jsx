@@ -15,11 +15,11 @@ const Caroussel = ({ images }) => {
 
     return (
         <div className="caroussel">
-            <button className="prev" onClick={prevImage}>{"<"}</button>
+            <button className="caroussel-prev" onClick={prevImage}>{"<"}</button>
             <div className="caroussel-image">
                 <img src={images[index]} alt={`Slide ${index}`} />
             </div>
-            <button className="next" onClick={nextImage}>{">"}</button>
+            <button className="caroussel-next" onClick={nextImage}>{">"}</button>
         </div>
     );
 };

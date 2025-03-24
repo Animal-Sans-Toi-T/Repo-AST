@@ -21,11 +21,11 @@
     cursor: pointer;
   }
   
-  button.prev {
+  button.caroussel-prev {
     left: 0;
   }
   
-  button.next {
+  button.caroussel-next {
     right: 0;
   }
   
