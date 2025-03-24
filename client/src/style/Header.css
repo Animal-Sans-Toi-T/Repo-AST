@@ -1,3 +1,41 @@
-nav {
+@media (min-width: 1440px) {
+    .header-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #375A9E;
+    }
+
+    .header-logo {
+        height: auto;
+        width: 250px;
+        margin-left: 2em;
+    }
     
+    .header-nav-bar {
+        width: 100%;
+        display: flex;
+        column-gap: 7em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        margin-right: 3em;
+    }
+
+    .header-nav-bar a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .header-nav-bar li {
+        list-style: none;
+    }
+
+    .signaler {
+        background-color: orange;
+        padding: 0.5em;
+        border-radius: 0.5em;
+    }
+
 }
+
