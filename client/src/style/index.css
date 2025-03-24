@@ -11,6 +11,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --orange: rgba(255, 165, 0, 0.9137);
+  --bleu-roi: rgba(55, 90, 158, 1);
+  --bleu-clair: rgba(136, 159, 202, 0.5);
+
+
 }
 
 a {
