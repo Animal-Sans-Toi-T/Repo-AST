@@ -14,7 +14,7 @@ function App() {
   const images = [bergerImage, chatImage] //tableau d'images pour tester
 
   return (
-    <div>
+    <div className='mainContainer'>
       <Header />
       <main>
         <h2>Page d'acceuil</h2>
