@@ -6,19 +6,19 @@ import Caroussel from './components/Caroussel';
 import DonationsButton from './components/DonationsButton';
 
 // import d'images 
-import bergerImage from "./assets/berger-d-a.jpg";
-import chatImage from "./assets/chat-banderolle.jpg";
+//import bergerImage from "./assets/berger-d-a.jpg";
+//import chatImage from "./assets/chat-banderolle.jpg";
 
 function App() {
 
-  const images = [bergerImage, chatImage] //tableau d'images pour tester
+  //const images = [bergerImage, chatImage] //tableau d'images pour tester
 
   return (
     <div className='mainContainer'>
       <Header />
       <main>
         <h2>Page d'acceuil</h2>
-        <Caroussel images={images} />
+        <Caroussel />
         <DonationsButton />
       </main>
       <Footer />
