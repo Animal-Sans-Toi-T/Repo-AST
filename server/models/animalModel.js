@@ -3,7 +3,7 @@ const pool = require("../config/db");
 const Animal = {
   async getAllAnimals(limit = 10, offset = 0) {
     const connection = await pool.getConnection();
-    const query = "SELECT * FROM animal";
+    const query = "SELECT * FROM animaux";
     const results = await connection.query(query, [limit, offset]);
     connection.end();
     return results;
