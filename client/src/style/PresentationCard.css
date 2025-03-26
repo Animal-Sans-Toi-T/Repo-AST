@@ -1,0 +1,79 @@
+/* must be modified once the parent will be created */
+/* picture is ugly (border already cut but it's gonna be alright with proper pictures) */
+
+.PresentationCardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+
+    .PresentationCard {
+        position: relative;
+        background-color: pink;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        width: 90%;
+        align-self: center;
+        color: var(--bleu-roi);
+
+
+        .PresentationCard_img {
+            border: 5px solid var(--bleu-roi);
+            border-radius: 10px;
+            max-width: 400px;
+            min-width: 210px;
+            /* align-self: center; */
+        }
+
+        .PresentationCard_textContainer {
+            /* position: relative; */
+            /* align-self: center; */
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            /* max-width: 50%; */
+
+            h2 {
+                margin: 5%;
+                font-size: 1.5em;
+            }
+
+            p {
+                margin: 5%;
+            }
+
+            .PresentationCard_button {
+                background-color: var(--bleu-roi);
+                color: white;
+                text-transform: uppercase;
+                padding: 0.5em;
+                border-radius: 0.5em;
+                margin-right: 10%;
+                margin-bottom: 3%; 
+                align-self: flex-end;
+            }
+        }
+
+    }
+
+}
+
+
+
+        
+/* max smartphones*/
+@media (max-width: 480px) and (min-width: 320px) {
+
+.PresentationCard {
+    justify-content: center;
+}
+
+.PresentationCard_textContainer
+{
+    width: 80%;
+}
+
+}
