@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../style/Caroussel.css'
 import Bird1 from "../assets/bird-one.jpg";
 import Bird2 from "../assets/bird-two.jpg";
@@ -15,39 +15,68 @@ import Goat1 from "../assets/goat-one.jpg";
 import Goat2 from "../assets/goat-two.jpg";
 
 
+
 const Carousel = () => {
-    const images = [Bird1, Dog1, Goat1, Cat1, Bunny1, Bird2, Dog2, Cat2, Goat2, Bunny2, Dog3, Cat3, Chinchilla]
+    const originalImages = [Bird1, Dog1, Goat1, Cat1, Bunny1, Bird2, Dog2, Cat2, Goat2, Bunny2, Dog3, Cat3, Chinchilla]
    
     const [currentIndex, setCurrentIndex] = useState(0)
+    const [visibleImages, setVisibleImages] = useState(3)
+
+    const images = [...originalImages, ...originalImages]
    
     //const totalImages = images.length
-   
-    const visibleImages = 5
-
     //const maxDots = 8
 
-    const maxScroll = images.length - visibleImages + 1
+    useEffect(() => {
+        const updateVisibleImages = () => {
+            if (window.innerWidth < 480){
+                setVisibleImages(1) //format gsm
+            } else if (window.innerWidth < 768){
+                setVisibleImages(2) //format tablette
+            } else {
+                setVisibleImages(3) //format pc
+            }
+        }
+
+        updateVisibleImages()
+        window.addEventListener("resize", updateVisibleImages)
+        return () => window.removeEventListener("resize", updateVisibleImages)
+    }, [])
+
+    useEffect(() => {
+        if(currentIndex === originalImages.length){
+            setTimeout(() => {
+                setCurrentIndex(0)
+            }, 500)
+        } else if (currentIndex < 0) {
+            setTimeout(() => {
+                setCurrentIndex(originalImages.length - 1)
+            }, 500)
+        }
+    }, [currentIndex, originalImages.length])
+
+    //const maxScroll = images.length - visibleImages + 1
 
 
     const nextImage = () => {
-        setCurrentIndex((prevIndex) => (prevIndex < maxScroll - 1 ? prevIndex + 1 : 0))
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
     }
 
     const prevImage = () => {
-        setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : maxScroll - 1))
+        setCurrentIndex((prevIndex) => (prevIndex -1 + images.length) % images.length)
     }
 
     return (
         <div className='carousel-container'>
-            <h2 className='carousel-title'>Adopte-moi!</h2>
+            <h2 className='carousel-title'>Adopte-moi !</h2>
             <div className='carousel-wrapper'>
                 <div className='carousel-buttons'>
                 <button type="button" className='button-prev' onClick={prevImage}>❮</button>
                 <button type="button" className='button-next' onClick={nextImage}>❯</button>
                 </div>
                 
-                <div className='carousel-images' style={{ transform: `translateX(-${currentIndex * (60 / visibleImages)}%)` }}>
-                    {images.concat(images).map((img, index) => (
+                <div className='carousel-images' style={{ transform: `translateX(-${currentIndex * (100 / visibleImages)}%)` }}>
+                    {images.map((img, index) => (
                         <img
                             key={index} 
                             src={img}
@@ -60,7 +89,7 @@ const Carousel = () => {
             </div>
             <div className='carousel-progress-bar'>
                 <div className='carousel-progress-thumb'
-                     style={{ transform: `translateX(${(currentIndex / (maxScroll - 1)) * 100}%)`}}
+                     style={{ transform: `translateX(${(currentIndex % originalImages.length) / (originalImages.length -1) * 100}%)`}}
                      />
             </div>
             {/*<div className='carousel-indicator'>
