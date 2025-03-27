@@ -15,7 +15,8 @@
 
 
     .DonationsButton_p {
-        color: black;
+        color: white;
+        text-transform: uppercase;
         /* height: auto; */
         /* max-height: 50px; */
 
