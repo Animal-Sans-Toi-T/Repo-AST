@@ -7,6 +7,7 @@ import Caroussel from './components/Caroussel';
 import DonationsButton from './components/DonationsButton';
 import PresentationCard from './components/PresentationCard';
 
+
 // import d'images 
 import bergerImage from "./assets/berger-d-a.jpg";
 import chatImage from "./assets/chat-banderolle.jpg";
@@ -16,6 +17,7 @@ function App() {
   const images = [bergerImage, chatImage] //tableau d'images pour tester
 
   return (
+    <>
     <div className='mainContainer'>
       <Header />
       <main>
@@ -26,7 +28,9 @@ function App() {
       </main>
       <Footer />
     </div>
-  );
+  </>
+  )
 };
 
-export default App
+export default App;
+
