@@ -3,6 +3,8 @@ import './style/App.css'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Caroussel from './components/Caroussel';
+import DonationsButton from './components/DonationsButton';
+import PresentationCard from './components/PresentationCard';
 
 // import d'images 
 import bergerImage from "./assets/berger-d-a.jpg";
@@ -13,14 +15,16 @@ function App() {
   const images = [bergerImage, chatImage] //tableau d'images pour tester
 
   return (
-   <div>
-    <Header />
-    <main>
-      <h2>Page d'acceuil</h2>
-      <Caroussel images={images}/>
-    </main>
-    <Footer />
-   </div>
+    <div className='mainContainer'>
+      <Header />
+      <main>
+        <h2>Page d'acceuil</h2>
+        <Caroussel images={images} />
+        <PresentationCard/>
+        <DonationsButton />
+      </main>
+      <Footer />
+    </div>
   );
 };
 
