@@ -5,6 +5,11 @@ import Footer from './components/Footer';
 import Caroussel from './components/Caroussel';
 import DonationsButton from './components/DonationsButton';
 
+//pour carousel
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import CarouselStyles from './components/CarouselStyles';
+
 // import d'images 
 //import bergerImage from "./assets/berger-d-a.jpg";
 //import chatImage from "./assets/chat-banderolle.jpg";
