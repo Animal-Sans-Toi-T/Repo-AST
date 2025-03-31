@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { Link } from 'react-router';
+import { NavLink } from 'react-router';
 import App from "./App.jsx";
 import PresentationPage from './pages/PresentationPage.jsx';
 import NewsletterPage from './pages/NewsletterPage.jsx';
