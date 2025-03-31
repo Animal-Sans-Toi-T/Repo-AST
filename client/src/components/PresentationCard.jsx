@@ -15,7 +15,7 @@ const PresentationCard = () => {
         <>
             <div className="PresentationCardContainer">
 
-                <div className="PresentationCard">
+                <div className="PresentationCardImgText">
                     <img className="PresentationCard_img" src={hangar} alt="hangar Viemme 2015" />
                     <div className="PresentationCard_textContainer">
                         <h2>Qui sommes-nous?</h2>
@@ -27,7 +27,7 @@ const PresentationCard = () => {
                     </div>
                 </div>
 
-                <div className="PresentationCard">
+                <div className="PresentationCardTextImg">
                     <div className="PresentationCard_textContainer">
                         <h2>Nos pensionnaires</h2>
                         <p>ici un joli texte pour résumer qui est animal sans toit, peut-être dire le nom de la ville ou une autre info importante. Pour en savoir plus </p>
@@ -39,7 +39,7 @@ const PresentationCard = () => {
                     <img className="PresentationCard_img" src={whiteHorse} alt="white horse in field" />
                 </div>
 
-                <div className="PresentationCard">
+                <div className="PresentationCardImgText">
                     <img className="PresentationCard_img" src={hangar} alt="hangar Viemme 2015" />
                     <div className="PresentationCard_textContainer">
                         <h2>Sensibilisation</h2>
@@ -51,7 +51,7 @@ const PresentationCard = () => {
                     </div>
                 </div>
 
-                <div className="PresentationCard">
+                <div className="PresentationCardTextImg">
                     <div className="PresentationCard_textContainer">
                         <h2>Ils ont trouvé une famille</h2>
                         <p>ici un joli texte pour résumer qui est animal sans toit, peut-être dire le nom de la ville ou une autre info importante. Pour en savoir plus </p>

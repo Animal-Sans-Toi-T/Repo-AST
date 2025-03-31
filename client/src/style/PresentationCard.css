@@ -15,14 +15,27 @@
     width: 80%;
     margin: auto;
 
+}
 
-    .PresentationCard {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
+.PresentationCardImgText {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.PresentationCardTextImg {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}
 
 
         .PresentationCard_img {
@@ -70,10 +83,6 @@
 
         }
 
-    }
-
-}
-
 
 /* / large screens /
 @media (min-width: 1440px) */
@@ -102,13 +111,35 @@
 /* tablets landscape and computer screens*/
 @media (min-width: 768px) and (max-width:1023px) {
 
-    .PresentationCard_textContainer {
+    .PresentationCardImgText {
+        justify-content: center;
+    }
+
+    .PresentationCardTextImg {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+
+    /* .PresentationCard_textContainer {
         max-width: 50%;
     }
 
     .PresentationCard_img {
         max-width: 50%;
+    } */
+
+
+    .PresentationCard_textContainer {
+        /* width: auto; */
+        max-width: 80%;
     }
+
+    .PresentationCard_img {
+        align-self: center;
+        max-width: 80%;
+    }
+
 }
 
 
@@ -116,7 +147,7 @@
 /* REM: it's not responsive under 320px but it doesnt matter because it's the smallest smartphone screen */
 @media (max-width: 768px) {
 
-    .PresentationCard {
+    /* .PresentationCard {
         justify-content: center;
     }
 
@@ -126,5 +157,27 @@
 
     .PresentationCard_img {
         align-self: center;
+    } */
+
+    .PresentationCardImgText {
+        justify-content: center;
+    }
+
+    .PresentationCardTextImg {
+        justify-content: center;
+    }
+
+    .PresentationCard_textContainer {
+        width: auto;
+        max-width: 80%;
+    }
+
+    .PresentationCard_img {
+        align-self: center;
+        max-width: 80%;
+    }
+
+    .PresentationCardTextImg {
+        flex-wrap: wrap-reverse;
     }
 }
