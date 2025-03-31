@@ -1,0 +1,15 @@
+.ContactPageContainer {
+    max-width: 80%;
+    margin: auto;
+    display: flex; 
+    flex-direction: row;
+}
+
+.contactInfosCard {
+    
+}
+
+
+.contactInfos {
+    max-width: 50%;
+}

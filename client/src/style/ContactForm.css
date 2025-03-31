@@ -1,0 +1,30 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+
+.send {
+    background-color: orange;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    width: fit-content;
+}
+
+.textFormsContainer {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    gap: 1em;
+
+}
+
+.radioButtonsContainer {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+
