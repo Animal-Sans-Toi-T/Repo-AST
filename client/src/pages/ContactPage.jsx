@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 
-function ContactsPage() {
+function ContactPage() {
     return (
         <>
             <Header />
@@ -12,4 +12,4 @@ function ContactsPage() {
     )
 }
 
-export default ContactsPage;
+export default ContactPage;

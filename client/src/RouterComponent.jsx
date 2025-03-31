@@ -7,7 +7,7 @@ import PresentationPage from './pages/PresentationPage.jsx';
 import NewsletterPage from './pages/NewsletterPage.jsx';
 import AgendaPage from './pages/AgendaPage.jsx';
 import MembresPage from './pages/MembresPage.jsx';
-import ContactsPage from './pages/ContactsPage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
 import GaleriePage from './pages/GaleriePage.jsx';
 import DevenirMembrePage from './pages/DevenirMembrePage.jsx';
 import MatérielPromoPage from './pages/MatérielPromoPage.jsx';
@@ -28,7 +28,7 @@ function RouterComponent() {
                 <Route path="/newsletter" element ={<NewsletterPage/>}/>
                 <Route path="/agenda" element ={<AgendaPage/>}/>
                 <Route path="/membres" element ={<MembresPage/>}/>
-                <Route path="/contacts" element ={<ContactsPage/>}/>
+                <Route path="/contact" element ={<ContactPage/>}/>
                 <Route path="/galerie" element ={<GaleriePage/>}/>
                 <Route path="/devenir-membre" element ={<DevenirMembrePage/>}/>
                 <Route path="/materiel-promotionnel" element ={<MatérielPromoPage/>}/>
