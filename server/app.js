@@ -9,6 +9,10 @@ app.use(express.json());
 // Routes
 app.use("/api", animalRoutes);
 
+// Route pour récupérer l'url locale de mes images
+
+app.use("/uploads", express.static("public/uploads"));
+
 // Limitation d'accès, une surcouche de sécurité
 
 app.use("/config", (req, res) => {
