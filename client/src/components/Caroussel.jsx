@@ -7,7 +7,7 @@ import Bunny2 from "../assets/bunny-white-brown.jpg";
 import Cat1 from "../assets/cat-black.jpg";
 import Cat2 from "../assets/cat-grey.jpg";
 import Cat3 from "../assets/cat-two-grey.jpg";
-import Chinchilla from "../assets/chinchilla.jpg";
+import Chichi from "../assets/chinchilla.jpg";
 import Dog1 from "../assets/dog-black.jpg";
 import Dog2 from "../assets/dog-husky.jpg";
 import Dog3 from "../assets/dog-white.jpg";
@@ -17,7 +17,7 @@ import Goat2 from "../assets/goat-two.jpg";
 
 
 const Carousel = () => {
-    const originalImages = [Bird1, Dog1, Goat1, Cat1, Bunny1, Bird2, Dog2, Cat2, Goat2, Bunny2, Dog3, Cat3, Chinchilla]
+    const originalImages = [Bird1, Dog1, Goat1, Cat1, Bunny1, Bird2, Dog2, Cat2, Goat2, Bunny2, Dog3, Cat3, Chichi]
    
     const [currentIndex, setCurrentIndex] = useState(0)
     const [visibleImages, setVisibleImages] = useState(3)
