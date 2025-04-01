@@ -14,7 +14,7 @@ const Header = () => {
                     <ul>
                         <div className="header-nav-bar">
                             <li><NavLink to="/presentation" activeClassName="active">ASBL</NavLink></li>
-                            <li><NavLink to="/contacts" activeClassName="active">CONTACT</NavLink></li>
+                            <li><NavLink to="/contact" activeClassName="active">CONTACT</NavLink></li>
                             <li><NavLink to="/adoptables" activeClassName="active">ADOPTABLES</NavLink></li>
                             <li><NavLink to="/galerie" activeClassName="active">GALERIE</NavLink></li>
                             {/* TO DO after the sub-menu is created */}

@@ -10,7 +10,7 @@ const Animal = {
         a.nom,
         a.sexe,
         a.race,
-        a.commentaire
+        a.commentaire,
         CASE
           WHEN p.adresse IS NOT NULL THEN CONCAT(?, p.adresse)
           ELSE NULL
