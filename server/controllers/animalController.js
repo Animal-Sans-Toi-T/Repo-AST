@@ -16,25 +16,26 @@ const AnimalController = {
       const animals = await Animal.getAllAnimals(limit, offset);
       res.json(animals);
     } catch (err) {
+      console.log(err);
       res.status(500).json({ error: "Une erreur est survenue" });
     }
   },
 
-  async create(req, res) {
+  // async create(req, res) {
 
-    const { error } = animalSchema.validate(req.body);
-    if(error) {
-      return res.status(400).json({ error: error.details[0].message });
-    }
+  //   const { error } = animalSchema.validate(req.body);
+  //   if(error) {
+  //     return res.status(400).json({ error: error.details[0].message });
+  //   }
 
-    const { nom, espece, age } = req.body;
-    try {
-      await Animal.createAnimal(nom, espece, age);
-      res.status(201).json({ message: "Animal créé avec succès" });
-    } catch (err) {
-      res.status(500).json({ error: "Une erreur est survenue" });
-    }
-  },
+  //   const { nom, espece, age } = req.body;
+  //   try {
+  //     await Animal.createAnimal(nom, espece, age);
+  //     res.status(201).json({ message: "Animal créé avec succès" });
+  //   } catch (err) {
+  //     res.status(500).json({ error: "Une erreur est survenue" });
+  //   }
+  // },
 };
 
 module.exports = AnimalController;
