@@ -42,6 +42,22 @@
         padding-bottom: 3%;
     }
 
+    a.link-media {
+        color: white;
+    }
+    a.link-media:hover{
+        color: orange ;
+        font-weight: 600;
+    }
+
+    a.MailTo-link {
+        color: white;
+    }
+    a.MailTo-link:hover {
+        color: orange ;
+        font-weight: 600;
+    }
+
 
     .div-horaires {
         display: flex;
@@ -103,106 +119,15 @@
 }
 
 
+
+
+
+
+
 /* MEDIUM SCREEN */
 @media screen and (min-width: 641px) and (max-width: 1007px){
     .footer-container{
-        padding-top: 3%;
-        padding-bottom: 3%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        background-color: #375A9E;
-        overflow: hidden;
-        color: white;
-    }
-
-    .container-icon-coordonnees{
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-    }
-
-    .div-place, .div-phone, .div-mail, .div-media {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 1% 0% 1% 0%;
-        width: 330px;
-    }
-    nav {
-        margin-left: 4%;
-        width: 50%;
-    }
-
-    a {
-        margin-right: 2%;
-    }
-    .link-map {
-        color: white;
-        margin-left: 16%;
-        width: 310px;
-    }
-    .img-icon-phone{
-        margin-right: 17%;
-    }
-    .a-icon-mail {
-        margin-right: 14%;
-    }
-    .a-icon-media {
-        margin-right: 4%;
-    }
-
-
-
-    .text-copyright {
-        margin: 0% 5% 0% 5%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        font-size: 12px;
-    }
-
-    .horaires {
-        margin-right: 4%;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        padding: 1% 1% 2% 1%;
-        height: 200px;
-        width: 200px;
-        height: 8em;
-        width: 10em;
-        border: solid 5px #9BACCF;
-        border-radius: 12px;
-    }
-    li {
-        list-style: none;
-    }
-    .text-titre-horaires {
-        margin-bottom: 20%;
-    }
-    .iconTime {
-        width: 30px;
-        
-    }
-    .hr-mobile{
-        display: none;
-    }
-
-    .container-mobile-map-google {
-        display: none;
-    }
-
-    .copyright{
-        color: #9BACCF;
-    }  
-}
-
-/* LARGE SCREEN */
-@media screen and (min-width: 1008px) {
-    .footer-container{
-        padding-top: 2%;
-        padding-bottom: 1%;
+        padding: 5% 2% 1% 2%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto auto;
@@ -214,6 +139,7 @@
         overflow: hidden;
         color: white;
     }
+
     .container-icon-coordonnees{
         margin: 0 auto;
         display: flex;
@@ -224,6 +150,7 @@
     .empty {
         background-color: transparent;
         border: none;
+        grid-column: 3;
     }
 
     .div-place, .div-phone, .div-mail, .div-media {
@@ -262,32 +189,183 @@
         margin-right: 4%;
     }
 
+    a.link-media {
+        color: white;
+    }
+    a.link-media:hover{
+        color: orange ;
+        font-weight: 600;
+    }
 
-    .horaires {
-            margin: 0 auto;
+    a.MailTo-link {
+        color: white;
+    }
+    a.MailTo-link:hover {
+        color: orange ;
+        font-weight: 600;
+    }
+
+    .div-horaires{
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: fit-content;
+    }
+    li {
+        list-style: none;
+    }
+    .subtext-horaires{
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-titre-horaires {
+        margin-bottom: 20%;
+    }
+    .iconTime {
+        margin-top: 3%;
+        width: 30px;
+        
+    }
+    
+    .hr-mobile {
+        display: none;
+    }
+
+
+    .div-text-copyright {
+        margin: 5% 5% 0% 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        grid-column: span 3;
+    }
+    .div-infos {
             display: flex;
             flex-direction: column;
-            padding: 1% 1% 2% 1%;
-            height: 200px;
-            width: 200px;
-            height: 8em;
-            width: 10em;
-            border: solid 5px #9BACCF;
-            border-radius: 12px;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5%;
         }
-        li {
-            list-style: none;
-        }
-        .text-titre-horaires {
-            margin-bottom: 20%;
-        }
-        .iconTime {
-            width: 30px;
-            
-        }
-        .hr-mobile {
-            display: none;
-        }
+    .copyright{
+        color: #9BACCF;
+    }    
+}
+
+/* LARGE SCREEN */
+@media screen and (min-width: 1008px) {
+    .footer-container{
+        padding-top: 2%;
+        padding-bottom: 1%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        gap: 10px;
+        width: 100%;
+        margin: 20px auto;
+        /* justify-content: space-between; */
+        background-color: #375A9E;
+        overflow: hidden;
+        color: white;
+    }
+    .container-icon-coordonnees{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .empty {
+        background-color: transparent;
+        border: none;
+        margin: 0 auto;
+    }
+
+    .div-place, .div-phone, .div-mail, .div-media {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 1% 0% 1% 0%;
+        width: 330px;
+    }
+    nav {
+        margin-left: 4%;
+        width: 50%;
+    }
+    a {
+        margin-right: 2%;
+    }
+    .link-map {
+        color: white;
+        margin-left: 16%;
+        width: 310px;
+    }
+    .link-map:hover {
+        color: orange;
+        font-weight: 600;
+    }
+    .container-mobile-map-google {
+        display: none;
+    }
+    .iconPhone{
+        margin-right: 17%;
+    }
+    .a-icon-mail {
+        margin-right: 14%;
+    }
+    .a-icon-media {
+        margin-right: 4%;
+    }
+
+    a.link-media {
+        color: white;
+    }
+    a.link-media:hover{
+        color: orange ;
+        font-weight: 600;
+    }
+
+    a.MailTo-link {
+        color: white;
+    }
+    a.MailTo-link:hover {
+        color: orange ;
+        font-weight: 600;
+    }
+
+    .div-horaires{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: fit-content;
+    }
+    li {
+        list-style: none;
+    }
+    .subtext-horaires{
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-titre-horaires {
+        margin-bottom: 20%;
+    }
+    .iconTime {
+        margin-top: 3%;
+        width: 30px;
+        
+    }
+    .hr-mobile {
+        display: none;
+    }
 
 
     .div-text-copyright {
@@ -311,7 +389,7 @@
     }    
 
 
-    .hover-container {
+    /* .hover-container {
         position: relative;
         display: inline-block;
     }
@@ -328,6 +406,6 @@
         .hover-container:hover .hover-image{
             opacity: 1;
             transform: translateX(-50%) translateY(-100%);
-        }
+        } */
     
 }

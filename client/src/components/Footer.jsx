@@ -1,14 +1,16 @@
 import React from "react";
+import ReactDOM from "react-dom/client";
 import "../style/Footer.css";
 import iconPlace from "../assets/icon-place.png";
 import iconPhone from "../assets/icon-phone.png";
 import iconMail from "../assets/icon-mail.png";
 import iconMedia from "../assets/icon-media.png";
 import iconTime from "../assets/icon-time.png";
-import MapGoogle from "./MobileMapGoogle.jsx";
+import HoverImage from "../assets/img-hover.jpg";
+
 import MainMap from "./MainMapGoogle.jsx";
 import MobileMap from "./MobileMapGoogle.jsx";
-import HoverImage from "../assets/img-hover.jpg";
+import MailTo from "./MailTo.jsx";
 
 const Footer = () => {
     return (
@@ -32,17 +34,19 @@ const Footer = () => {
 
                     <div className="div-mail">
                         <a className="a-icon-mail" href=""><img className="img-icon iconMail" src={iconMail} alt="Icon e-mail" /></a>
-                        <p>Contactez-nous</p>
+                        <MailTo className="MailTo-link" email="info@animal-sans-toit.be" subject="Demande d'informations" body="Bonjour,">
+                            Contactez-nous
+                        </MailTo>
                     </div>
 
                     <div className="div-media">
-                        <a className="a-icon-media" href=""><img className="img-icon iconMedia" src={iconMedia} alt="Icon Media" /></a>
-                        <p>Restons connectés</p>
+                        <a className="a-icon-media" href="https://www.facebook.com/animalsanstoit/?locale=fr_FR"><img className="img-icon iconMedia" src={iconMedia} alt="Icon Media" /></a>
+                        <a className="link-media" href="https://www.facebook.com/animalsanstoit/?locale=fr_FR">Restons connectés</a>
                     </div>
                 </nav>
 
-                {/* EMPTY */}
-                <div className="empy">
+                {/* MAP LARGE ET MEDIUM SCREEN*/}
+                <div className="empty">
                 < MainMap/>
                 </div>
 
@@ -57,7 +61,7 @@ const Footer = () => {
                 </div>
                 <hr className="hr-mobile" />
 
-                {/* COPYRIGHT */}
+                {/* TOUT EN BAS */}
                 <div className="div-text-copyright">
                     <div className="div-infos">
                         <p className="p-infos-1">Siège Social : 188 rue de Huy, 4317 Viemme (Faimes) | 019 63 00 36</p>
@@ -65,7 +69,7 @@ const Footer = () => {
                     </div>
                     <div className="hover-container">
                         <p className="copyright">&#169; Copyright, tous droits réservés</p>
-                        <img className="hover-image" src={HoverImage} alt="Image surprise" />
+                        {/* <img className="hover-image" src={HoverImage} alt="Image surprise" /> */}
                     </div>
                 </div>
                 
