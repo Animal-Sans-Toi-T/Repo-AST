@@ -6,6 +6,8 @@ import "../style/ContactPage.css";
 
 
 // TODO: import google map 
+// - add link to phone when click on phone
+// - add link to email when click on email
 
 
 
