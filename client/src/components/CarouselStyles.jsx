@@ -32,12 +32,12 @@ const CarouselStyles = [
     {
         id: 4,
         alt: "this is a cat",
-        src: Cat1,
+        src: Cat3,
     },
     {
         id: 5,
         alt: "this is a dog",
-        src: Dog1,
+        src: Dog3,
     },
     {
         id: 6,
