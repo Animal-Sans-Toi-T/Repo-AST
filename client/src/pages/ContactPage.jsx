@@ -18,36 +18,41 @@ function ContactPage() {
                 <div className='contactInfoCard'>
                     <h2>Coordonnées</h2>
 
-                    <div className='contactInfos'>
+                    <div className='contactInfo'>
 
-                        <h3>Adresse</h3>
-                        Ferme de Viemme   (refuge & siège social de l'asbl)
-                        Rue de Huy, 188
-                        4317 Viemme (Faimes)
-                        <h3>Téléphone</h3>
-                        019 63 00 36
-                        <h3>Email général</h3>
-                        info@animal-sans-toit.com
+                        <div className='infoBlock'><h3>Adresse</h3>
+                            <p>Ferme de Viemme (refuge & siège social de l'asbl)
+                                Rue de Huy, 188
+                                4317 Viemme (Faimes)</p></div>
 
-                        <h3>Horaires</h3>
-                        Tous les jours (y compris fériés)
-                        14h00 à 17h00 et éventuellement sur rendez-vous
+                        <div className='infoBlock'><h3>Téléphone</h3>
+                        <p>019 63 00 36</p>
+                        </div>
 
-                        <h3>Compte bancaire</h3>
-                        Iban: BE24 0019 9777 7038   BNP Paribas Fortis
-                        Bic: GEBA BEBB
+                        <div className='infoBlock'><h3>Email général</h3>
+                        <p>info@animal-sans-toit.com</p></div>
 
-                        Le compte BE48 1270 6282 4727 (Beobank) reste valable.
+                        <div className='infoBlock'><h3>Horaires</h3>
+                        <p>Tous les jours (y compris fériés)
+                        14h00 à 17h00 et éventuellement sur rendez-vous</p></div>
+
+                        <div className='infoBlock'><h3>Compte bancaire</h3>
+                        <p>Iban: BE24 0019 9777 7038   BNP Paribas Fortis
+                        Bic: GEBA BEBB</p>
+
+                        <p className='smallCharacters'>Le compte BE48 1270 6282 4727 (Beobank) reste valable.
                         Toutefois, et en particulier si vous êtes un nouveau donateur, nous vous recommandons d'utiliser le compte BNPPF car malgré nos multiples réclamations Beobank n'est pas toujours en mesure de nous communiquer l'identité (avec adresse complète) des donateurs.
+                        </p></div>
 
-                        <h3>Numéro d'entreprise</h3>
-                        0 478 572 660
+                        <div className='infoBlock'><h3>Numéro d'entreprise</h3>
+                        <p>0 478 572 660</p>
+                        </div>
 
 
-                        <h3>Numéros d'agrément</h3>
-                        HK 306 03 305
-                        HK 306 04 306
-
+                        <div className='infoBlock'><h3>Numéros d'agrément</h3>
+                        <p>HK 306 03 305
+                        HK 306 04 306</p>
+                        </div>
                     </div>
                 </div>
             </div>
