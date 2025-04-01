@@ -25,7 +25,7 @@
 
 .carousel-images img {
   display: flex;
-  margin: 0 -5px;
+  margin: 0 auto;
   height: 17rem;
   object-fit: cover;
   width: 100%;
