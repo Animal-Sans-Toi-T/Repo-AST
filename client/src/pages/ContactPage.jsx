@@ -4,6 +4,12 @@ import ContactForm from '../components/ContactForm';
 import "../style/ContactForm.css";
 import "../style/ContactPage.css";
 
+
+// TODO: import google map 
+
+
+
+
 function ContactPage() {
     return (
         <>
@@ -21,8 +27,8 @@ function ContactPage() {
                     <div className='contactInfo'>
 
                         <div className='infoBlock'><h3>Adresse</h3>
-                            <p>Ferme de Viemme (refuge & siège social de l'asbl)
-                                Rue de Huy, 188
+                            <p>Ferme de Viemme (refuge & siège social de l'asbl)<br />
+                                Rue de Huy, 188 <br />
                                 4317 Viemme (Faimes)</p></div>
 
                         <div className='infoBlock'><h3>Téléphone</h3>
@@ -37,10 +43,10 @@ function ContactPage() {
                         14h00 à 17h00 et éventuellement sur rendez-vous</p></div>
 
                         <div className='infoBlock'><h3>Compte bancaire</h3>
-                        <p>Iban: BE24 0019 9777 7038   BNP Paribas Fortis
+                        <p>Iban: BE24 0019 9777 7038   BNP Paribas Fortis <br/>
                         Bic: GEBA BEBB</p>
 
-                        <p className='smallCharacters'>Le compte BE48 1270 6282 4727 (Beobank) reste valable.
+                        <p className='smallCharacters'>Le compte BE48 1270 6282 4727 (Beobank) reste valable. <br/>
                         Toutefois, et en particulier si vous êtes un nouveau donateur, nous vous recommandons d'utiliser le compte BNPPF car malgré nos multiples réclamations Beobank n'est pas toujours en mesure de nous communiquer l'identité (avec adresse complète) des donateurs.
                         </p></div>
 
@@ -50,7 +56,7 @@ function ContactPage() {
 
 
                         <div className='infoBlock'><h3>Numéros d'agrément</h3>
-                        <p>HK 306 03 305
+                        <p>HK 306 03 305  <br/>
                         HK 306 04 306</p>
                         </div>
                     </div>

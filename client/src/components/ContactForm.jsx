@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import nodemailer from 'nodemailer';
 
 function ContactForm() {
 
@@ -12,13 +13,46 @@ function ContactForm() {
     const [email, setEmail] = useState("");
     const [inquiry, setInquiry] = useState("");
     const [isActive, setIsActive] = useState("");
+    const [completedForm, setCompletedForm] = useState("");
 
     const handleLastnameChange = (e) => {
         setLastname(e.target.value);
     };
 
-    // const submitForm = async(e) => {
+    // const transporter = nodemailer.createTransport({
+    //     service: 'Gmail',
+    //     auth: { 
+    //       user: process.env.EMAIL,
+    //       pass: process.env.PASSWORD
+    //     }
+    //   });
+
+
+    //TODO: check validity of input 
+    // check security 
+    // check my axios post 
+
+    // const submitForm = async (e) => {
     //     e.preventDefault();
+
+    //     try {
+    //         await axios.post('/contact', {
+    
+    //             email, 
+    //         });
+    //         showSuccess();
+
+    //         try {
+    //             const response = await axios.post(`http://localhost:5173/api/contact`, completedForm);
+    //             console.log("Response:", response.data);
+    //             alert("Votre formulaire a bien été envoyé");
+    //         } catch (error) {
+    //             console.error("Error posting data:", error);
+    //         }
+
+    //     }
+    // };
+
 
 
 
@@ -27,25 +61,25 @@ function ContactForm() {
             <form className='contactForm' action="mailto:emilieprick@gmail.com" method="post" enctype="text/plain">
 
                 <div className='textFormsContainer'>
-                    <label>Nom:</label><br />
-                    <input type="text" name="nom" onChange={(e) => handleLastnameChange(e)} required />
-                    {/* <label>Prénom:
-                        <input type="text" name="nom" required /></label>
+                    <label>Nom*:</label>
+                    <input type="text" name="lastName" placeholder="Nom *" onChange={(e) => handleLastnameChange(e)} required />
+                    <label>Prénom*:
+                        <input type="text" name="firstName" placeholder='Prénom *'required /></label>
                     <label>Rue:
-                        <input type="text" name="nom" required /></label>
+                        <input type="text" name="street" placeholder='Rue'required /></label>
                     <label>Code postal:
-                        <input type="number" name="nom" required /></label>
+                        <input type="number" name="zipCode" placeholder='Code Postal'required /></label>
                     <label>Localité:
-                        <input type="text" name="nom" required /></label>
+                        <input type="text" name="city" placeholder='Localité' required /></label>
                     <label>Pays:
-                        <input type="text" name="nom" required /></label>
+                        <input type="text" name="country" placeholder='Pays' required /></label>
                     <label>Téléphone:
-                        <input type="tel" name="nom" required /></label>
-                    <label>Email:
-                        <input type="email" name="nom" required /></label>
-                    <label>Demande:
-                        <input type="textarea" minlength="4"
-                            maxlength="250" size="50" name="nom" required /></label> */}
+                        <input type="tel" name="phone" placeholder='Numéro de téléphone' required /></label>
+                    <label>Email*:
+                        <input type="email" name="email" placeholder='Email' required /></label>
+                    <label>Demande*:
+                        <textarea type="textarea" placeholder='Votre demande/question' minlength="4"
+                            maxlength="250" size="50" name="inquiry" required /></label>
                 </div>
                 {/* <div className='radioButtonsContainer'>
                     <input type="radio" id="plaintes" value="plaintes" />
@@ -57,7 +91,7 @@ function ContactForm() {
                 </div> */}
 
 
-                <button className="send" type="submit" onSubmit={(e)=>submitForm(e)}>Envoyer</button>
+                {/* <button className="send" type="submit" onSubmit={() => submitForm(completedForm)}>Envoyer</button> */}
 
             </form>
         </>

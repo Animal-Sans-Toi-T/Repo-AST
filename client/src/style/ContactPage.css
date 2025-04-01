@@ -20,12 +20,18 @@
 
         .contactInfo {
             padding: 5%;
-            display: flex; 
+            display: flex;
             flex-direction: column;
             gap: 1em;
 
             .smallCharacters {
-            font-size: 0.7em;
+                font-size: 0.7em;
+            }
+
+            .infoBlock {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
             }
         }
 
@@ -35,5 +41,13 @@
         /* background-color: rgb(196, 114, 149); */
         width: 50%;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+     h2 {
+        padding: 5%;
+     }
+     .contactForm {
+        padding: 5%
+     }
+
+
     }
 }
