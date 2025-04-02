@@ -46,9 +46,14 @@ const Footer = () => {
                 </nav>
 
                 {/* MAP LARGE ET MEDIUM SCREEN*/}
-                <div className="empty">
+                <div className="div-MainMap">
                 < MainMap/>
                 </div>
+
+                <div className="div-MobileMap">
+                    <MobileMap/>
+                </div>
+
 
                 {/* HORAIRES */}
                 <hr className="hr-mobile" />
