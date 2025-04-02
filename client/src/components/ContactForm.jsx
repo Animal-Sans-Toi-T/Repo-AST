@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 // import nodemailer from 'nodemailer';
+import Popup from 'reactjs-popup';
+import "./RGPD.jsx";
+import RGPD from './RGPD.jsx';
 
 function ContactForm() {
 
@@ -12,13 +15,12 @@ function ContactForm() {
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
     const [inquiry, setInquiry] = useState("");
-    // const [isActive, setIsActive] = useState("");
     const [subject, setSubject] = useState("");
 
     const [formInputs, setFormInputs] = useState({
         lastName: '',
         firstName: '',
-        generalSubject:'',
+        generalSubject: '',
 
     });
 
@@ -36,7 +38,7 @@ function ContactForm() {
     }
 
     const handleSubject = (e, subjectName) => {
-        setFormInputs({...formInputs, generalSubject:true})
+        setFormInputs({ ...formInputs, generalSubject: true })
 
     }
 
@@ -82,10 +84,20 @@ function ContactForm() {
         <>
             <form className='contactForm' action="mailto:emilieprick@gmail.com" method="post" enctype="text/plain">
 
+                <div className='radioButtonsContainer'>
+                    <h2>Je souhaite:</h2>
+                    <div className='radioButtonsBlock'>
+                        <input className='radioButton' type="radio" name="generalSubject" id="général" onChange={(e) => handleSubject(e,)} value={false} />
+                        <label for="plaintes">Demander une information générale</label></div>
+                    <div className='radioButtonsBlock'><input className="radioButton" type="radio" name="subject" id="maltraitance" value="plaintes" />
+                        <label for="plaintes">Dénoncer une maltraitance</label></div>
+                    <div className='radioButtonsBlock'><input className="radioButton" type="radio" name="subject" id="présidente" value="plaintes" />
+                        <label for="plaintes">Contacter la présidente</label></div>
+                </div>
+
                 <div className='textFormsContainer'>
-                    <label>Nom*:</label>
-                    <input type="text" name="lastName" placeholder="Nom *" onChange={(e) => handleLastnameChange(e)} required />
-                    <input type="text" name="firstName" placeholder='Prénom *' onChange={(e) => handleFirstnameChange(e)} required />
+                    <label>Nom*:<input type="text" name="lastName" placeholder="Nom *" onChange={(e) => handleLastnameChange(e)} required /></label>
+                    <label>Prénom*:<input type="text" name="firstName" placeholder='Prénom *' onChange={(e) => handleFirstnameChange(e)} required /></label>
                     {/* <label>Rue:
                         <input type="text" name="street" placeholder='Rue' required /></label>
                     <label>Code postal:
@@ -102,24 +114,19 @@ function ContactForm() {
                         <textarea type="textarea" placeholder='Votre demande/question' minlength="4"
                             maxlength="250" size="50" name="inquiry" required /></label> */}
                 </div>
-                <div className='radioButtonsContainer'>
-                    <div className='radioButtonsBlock'>
-                        <input className='radioButton' type="radio" name="generalSubject" id="général" onChange={(e) => handleSubject(e, )} value={false} />
-                        <label for="plaintes">Demander une information générale</label></div>
-                    <div className='radioButtonsBlock'><input className="radioButton" type="radio" name="subject" id="maltraitance" value="plaintes" />
-                        <label for="plaintes">Dénoncer une maltraitance</label></div>
-                    <div className='radioButtonsBlock'><input className="radioButton" type="radio" name="subject" id="présidente" value="plaintes" />
-                        <label for="plaintes">Contacter la présidente</label></div>
+                <div className='checkNewsletterBlock'>
+                    <input className='checkboxNewsletter' type="checkbox" id="newsletter" name="newsletter" />
+                    <label for="newsletter">Je souhaite recevoir les newsletters</label>
                 </div>
-
+                <div className='RGPD'>
+                    <input className='checkboxRGPD'type="checkbox" id="RGPD" name="RGPD" required />
+                    <label for="RGPD">J'accepte les RGPD</label>
+                </div>
+                <RGPD />
 
                 <button className="send" type="submit" onSubmit={() => submitForm(formInputs)}>Envoyer</button>
 
             </form>
-            {/* <div className='RGPD'>
-                <p>Dans le cadre de la règlementation européenne (RGPD), nous prenons en compte vos droits liés à la protection de la vie privée et à la protection de vos données personnelles. Nous donnons la priorité à la confidentialité et à la sécurisation des données que vous nous confiez. Nous traitons vos données à caractère personnel en interne mais, pour des raisons techniques, nous pouvons être amenés à les transmettre à des sous-traitants ou des partenaires qui s'engagent à mettre tout en œuvre pour garantir une sécurité et une confidentialité maximales au traitement de vos données.
-                En envoyant ce formulaire, vous acceptez formellement de nous confier des données personnelles. Quelles que soient les données collectées, elles ne sont jamais revendues à des tiers.</p>
-            </div> */}
         </>
 
     )

@@ -1,4 +1,5 @@
 import React from 'react';
+import Popup from 'reactjs-popup';
 import Header from '../components/Header';
 import ContactForm from '../components/ContactForm';
 import "../style/ContactForm.css";

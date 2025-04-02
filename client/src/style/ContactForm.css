@@ -1,10 +1,26 @@
 .contactForm {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
     margin: auto;
+    font-weight: bold;
 }
 
+.checkNewsletterBlock {
+    display: flex; 
+    gap: 0.7em;
+    .checkboxNewsletter {
+        max-width: fit-content;
+    }
+}
+
+.RGPD {
+    display: flex; 
+    gap: 0.7em;
+    .checkboxRGPD {
+        max-width: fit-content;
+    }
+}
 
 .send {
     background-color: orange;
@@ -13,11 +29,10 @@
     width: fit-content;
     align-self: center;
     color: white; 
-
 }
 
 .textFormsContainer {
-    padding: 5%;
+    /* padding: 5%; */
     display: flex;
     flex-direction: column;
     margin: 5%;
@@ -30,6 +45,10 @@ display: flex;
 flex-direction: row;
 }
 
+.RGPD {
+    max-width:80%;
+    
+}
 
 .radioButton {
     width: 1.5em;
@@ -49,10 +68,10 @@ input {
 }
 
 .radioButtonsContainer {
-    padding: 0.5em;
+    /* padding: 0.5em; */
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    /* margin: 5%; */
     gap: 1em;
 }
 
