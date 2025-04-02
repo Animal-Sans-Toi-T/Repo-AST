@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from 'react-router';
 import "../style/DonationsButton.css";
-import blackHeart from "../assets/icon-little-black-heart.png";
-import loadingHeart from "../assets/loadingheartIcon.gif";
-import emptyHeart from "../assets/emptyheartIcon.png";
+import littlewhiteheartIcon from "../assets/littlewhiteheartIcon.png";
 
 const DonationsButton = () => {
     return (
-            <button type="button"className="DonationsButton">
-                <p className="DonationsButton_p">Je fais un don</p>
-                <img src={emptyHeart} alt="black heart icon" className="DonationsButton-icon" />
+        <Link to="/Dons">
+            <button type="button" className="DonationsButton">
+                <p className="DonationsButton_p">Faire un don</p>
+                <img src={littlewhiteheartIcon} alt="little white heart icon" className="DonationsButton-icon" />
             </button>
+        </Link>
     );
 };
 
