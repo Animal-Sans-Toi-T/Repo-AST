@@ -12,7 +12,7 @@ const Caroussel = () => {
     const settings = {
       dots: true,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 5,
       slidesToScroll: 1,
       infinite: true,
       autoplay: true,
@@ -45,6 +45,7 @@ const Caroussel = () => {
           breakpoint: 1024,
           settings: { slidesToShow: 2},
         },
+        
       ],
    
     }
