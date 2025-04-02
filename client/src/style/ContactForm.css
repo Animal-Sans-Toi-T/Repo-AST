@@ -4,6 +4,7 @@
     width: 80%;
     margin: auto;
     font-weight: bold;
+    gap: 0.5em;
 }
 
 .checkNewsletterBlock {
@@ -17,6 +18,7 @@
 .RGPD {
     display: flex; 
     gap: 0.7em;
+    width: 100%; 
     .checkboxRGPD {
         max-width: fit-content;
     }
@@ -51,15 +53,29 @@ flex-direction: row;
 }
 
 .radioButton {
-    width: 1.5em;
+    width: 20px;
+    height: 20px;
     /* padding: 50%; */
-    margin: 0em 0.5em 0.5em 0.5em;
+    margin: 2px;
 }
 
 input {
     padding: 0.5em;
     border-radius: 0.5em;
     width: 100%;
+    border-color: var(--bleu-clair);
+
+    ::placeholder {
+        color: var(--bleu-foncé);
+    }
+}
+
+textarea {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    width: 100%;
+    max-width: 100%;
+    height: 8em;
     border-color: var(--bleu-clair);
 
     ::placeholder {
