@@ -27,9 +27,10 @@ function App() {
     <div className='mainContainer'>
       <Header />
       <main>
-        <h2>Page d'acceuil</h2>
+      <Banner />
         <Caroussel />
         <DonationsButton />
+        <PresentationCard />
       </main>
       <Footer />
     </div>

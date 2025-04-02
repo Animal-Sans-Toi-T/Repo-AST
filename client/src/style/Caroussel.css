@@ -12,7 +12,16 @@
   margin: 0 auto;
   width: 100%;
   height: 27rem;
+  overflow: visible !important;
 }
+
+.carousel-wrapper {
+  margin: 0 auto;
+  width: 90%;
+  height: 27rem;
+}
+
+
 
 .carousel-title {
   color: #375A9E;
@@ -24,7 +33,7 @@
 }
 
 .carousel-images img {
-  display: flex;
+  display: inline-block;
   margin: 0 auto;
   height: 17rem;
   object-fit: cover;
@@ -44,133 +53,77 @@
   box-shadow: 0.06rem 0.1rem 0.06rem 0.06rem rgba(0, 0, 0, 0.144);
 }
 
+.carousel-image:hover {
+  color: #FFA500;
+  background-color: #37599e;
+}
 
-.slick-list {
-  margin: 0 -50px;
+.custom-arrow {
+  width: 4rem;
+  height: 4rem;
+  color: #375A9E !important;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.custom-arrow::before { 
+  color: #375A9E !important;
+  font-size: 30px;
+}
+
+.next-arrow {
+  right: 5rem;
+}
+
+.prev-arrow {
+  left: 5rem;
 }
 
 
-.next-slick-arrow  {
+
+.container-carousel:hover{
+  opacity: 1;
+}
+
+
+.carousel-button {
+  background-color: #FFA500;
+  color: #fff;
+  margin-top: -3rem;
   position: relative;
-  z-index: 10;
+  z-index: 200;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.carousel-button:button{
+  background-color: orangered;
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+}
+
+/*
+.next-slick-arrow, .prev-slick-arrow{
+  background-color: #37599e;
+  position: absolute;
+  z-index: 1000;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   padding: 0.6rem;
-  border-radius: 50%;
+  border-radius: 40%;
+  width: 2rem;
+}
+
+.next-slick-arrow {
+  z-index: 1100 !important;
   right: 4rem;
 }
 
 .prev-slick-arrow {
-  position: relative;
-  z-index: 10;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  padding: 0.6rem;
-  border-radius: 50%;
-  left: 4rem;
-}
-
-
-
-/* large screens */
-@media (min-width: 1440px){
-
-}
-/* "normal" computer screens*/
-@media (max-width: 1439px) and (min-width: 1024px) {
-}
-
-/* laptops */
-@media (max-width: 1023px) {
-}
-
-/* tablets landscape */
-@media (max-width: 1023px) and (min-width: 768px) {
-}
-/* tablets*/
-@media (max-width: 768px) {
-
-}
-/* smartphones landscape*/
-@media (max-width: 480px) {
- 
-}
-/* smartphones */
-@media (max-width: 320px) {
-  
-}
-
-
-
-
-/*.dot {
-  background-color: #bbb;
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.dot.active {
-  background-color: #717171;
+  z-index: 100;
+  left: 5rem;
 }*/
-
-
-/*.carousel-container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.carousel-container::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-}
-
-.carousel-container::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-/*Carousel de Fred*/
-/*.caroussel {
-    position: relative;
-    max-width: 600px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  
-  .caroussel-image img {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* button { */
-    /* position: absolute;
-    /* top: 50%; */
-    /* transform: translateY(-50%); */
-    /* background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  } */
-  
-  button.caroussel-prev {
-    left: 0;
-  }
-  
-  button.caroussel-next {
-    right: 0;
-  }
-  */
