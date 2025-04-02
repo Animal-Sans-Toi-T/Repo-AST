@@ -10,12 +10,13 @@
     width: auto;
     height: 50px;
     position: fixed;
-    right: 0;
-    bottom: 0;
+    right: 3%;
+    bottom: 3%;
 
 
     .DonationsButton_p {
-        color: black;
+        color: white;
+        text-transform: uppercase;
         /* height: auto; */
         /* max-height: 50px; */
 

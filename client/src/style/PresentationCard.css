@@ -1,0 +1,183 @@
+/* TODO: 
+- adjust after being put in parent
+- do we keep "pour en savoir plus"? or do we put it in the button? If we keep, adjust alignment
+- change pictures
+- check responsiveness with large screen (I don't have one) */
+
+
+
+.PresentationCardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    max-width: 1439px;
+    width: 80%;
+    margin: auto;
+
+}
+
+.PresentationCardImgText {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.PresentationCardTextImg {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+
+        .PresentationCard_img {
+            border: 5px solid var(--bleu-roi);
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .PresentationCard_textContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+            h2 {
+                margin: 3% 5% 3% 5%;
+                font-size: 1.5em;
+                color: var(--bleu-foncé);
+            }
+
+            p {
+                margin: 3% 5% 3% 5%;
+                color: var(--bleu-roi);
+            }
+
+            .PresentationCard_textContainer_knowMoreContainer {
+                display: flex;
+                flex: row;
+                align-items: space-around;
+
+                .PresentationCard_button {
+                    background-color: var(--bleu-roi);
+                    color: white;
+                    text-transform: uppercase;
+                    padding: 0.8em;
+                    border-radius: 0.5em;
+                    margin: 3% 10% 3% 3%;
+                    align-self: flex-end;
+                }
+
+                p {
+                    align-self: baseline;
+                }
+            }
+
+        }
+
+
+/* / large screens /
+@media (min-width: 1440px) */
+
+/* "normal" computer screens*/
+@media (min-width: 1024px) {
+
+
+    /* après 1439, juste faire un container qui reste au centre */
+    .PresentationCardContainer {
+        max-width: 1439px;
+    }
+
+    .PresentationCard_textContainer {
+        max-width: 50%;
+    }
+
+    .PresentationCard_img {
+        /* max-width: 460px; */
+        max-width: 40%;
+    }
+
+}
+
+
+/* tablets landscape and computer screens*/
+@media (min-width: 768px) and (max-width:1023px) {
+
+    .PresentationCardImgText {
+        justify-content: center;
+    }
+
+    .PresentationCardTextImg {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+
+    /* .PresentationCard_textContainer {
+        max-width: 50%;
+    }
+
+    .PresentationCard_img {
+        max-width: 50%;
+    } */
+
+
+    .PresentationCard_textContainer {
+        /* width: auto; */
+        max-width: 80%;
+    }
+
+    .PresentationCard_img {
+        align-self: center;
+        max-width: 80%;
+    }
+
+}
+
+
+/* tablets and smartphones*/
+/* REM: it's not responsive under 320px but it doesnt matter because it's the smallest smartphone screen */
+@media (max-width: 768px) {
+
+    /* .PresentationCard {
+        justify-content: center;
+    }
+
+    .PresentationCard_textContainer {
+        width: auto;
+    }
+
+    .PresentationCard_img {
+        align-self: center;
+    } */
+
+    .PresentationCardImgText {
+        justify-content: center;
+    }
+
+    .PresentationCardTextImg {
+        justify-content: center;
+    }
+
+    .PresentationCard_textContainer {
+        width: auto;
+        max-width: 80%;
+    }
+
+    .PresentationCard_img {
+        align-self: center;
+        max-width: 80%;
+    }
+
+    .PresentationCardTextImg {
+        flex-wrap: wrap-reverse;
+    }
+}
