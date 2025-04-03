@@ -1,10 +1,6 @@
-// const cors = require("cors");
-// const express = require("express");
-// const animalRoutes = require("./routes/animalRoute");
-
-import cors from 'cors';
-import express from "express";
-import animalRoutes from "./routes/animalRoute.js"; 
+const cors = require("cors");
+const express = require("express");
+const animalRoutes = require("./routes/animalRoute");
 
 const app = express();
 const port = 3000;
