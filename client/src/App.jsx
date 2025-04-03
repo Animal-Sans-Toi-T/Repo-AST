@@ -5,34 +5,36 @@ import Footer from './components/Footer';
 import Banner from './components/Banner';
 import Caroussel from './components/Caroussel';
 import DonationsButton from './components/DonationsButton';
+
 import PresentationCard from './components/PresentationCard';
 import useFetchAnimaux from './hooks/useFetchAnimaux';
 
+//pour carousel
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import CarouselStyles from './components/CarouselStyles';
+
+// import d'images 
+//import bergerImage from "./assets/berger-d-a.jpg";
+//import chatImage from "./assets/chat-banderolle.jpg";
 
 function App() {
 
-  const { images, loading, error } = useFetchAnimaux();
+ //const images = [bergerImage, chatImage] //tableau d'images pour tester
+
 
   return (
-    <>
-      <div className='mainContainer'>
-        <Header />
-        <main>
-          <Banner />
-          {loading ? (
-            <p>Chargement des images...</p>
-          ) : error ? (
-            <p>Erreur : {error}</p>
-          ) : (
-            <Caroussel images={images} />
-          )}
-          <PresentationCard />
-          <DonationsButton />
-        </main>
-        <Footer />
-      </div>
-    </>
-  )
+    <div className='mainContainer'>
+      <Header />
+      <main>
+      <Banner />
+        <Caroussel />
+        <DonationsButton />
+        <PresentationCard />
+      </main>
+      <Footer />
+    </div>
+  );
 };
 
 export default App;
