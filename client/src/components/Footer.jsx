@@ -15,8 +15,11 @@ import MainMap from "./MainMapGoogle.jsx";
 import MobileMap from "./MobileMapGoogle.jsx";
 import MailTo from "./MailTo.jsx";
 
+import SocialLinks from "./SocialLinks.jsx";
+
 
 const Footer = () => {
+    const [showSocial, setShowSocial] = useState(false);
     return (
         <footer>
             <div className="footer-container">
@@ -44,12 +47,12 @@ const Footer = () => {
                     </div>
 
                     <div className="div-media">
-                        <div className="div-icon-media">
-                            <img className="img-icon-insta iconFooter" src={iconInsta} alt="Instagram" />
-                            <img className="img-icon-fcb iconFooter" src={iconFcb} alt="Facebook" />
-                            <img className="img-icon-TikTok iconFooter" src={iconTikTok} alt="TikTok" />
-                        </div>
-                        <a className="link-media" href="#" >Restons connectés</a>
+                        {/* Bouton pour afficher le composant SocialLinks */}
+                        <SocialLinks 
+                            iconInsta={iconInsta}
+                            iconFcb={iconFcb}
+                            iconTikTok={iconTikTok}
+                        />
                     </div>
                 </nav>
 
