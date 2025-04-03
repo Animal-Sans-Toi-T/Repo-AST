@@ -134,7 +134,7 @@
 
 
 /* MEDIUM SCREEN */
-@media screen and (min-width: 751px) and (max-width: 1007px){
+@media screen and (min-width: 751px) and (max-width: 1023px){
     .footer-container{
         padding: 5% 2% 1% 2%;
         display: grid;
@@ -285,7 +285,7 @@
 }
 
 /* LARGE SCREEN */
-@media screen and (min-width: 1008px) {
+@media screen and (min-width: 1024px) {
     .footer-container{
         padding-top: 2%;
         padding-bottom: 1%;
@@ -308,6 +308,11 @@
         justify-content: center;
     }
 
+    .container-icon-coordonnees nav {
+        margin-left: 4%;
+        width: 50%;
+    }
+
     .div-MainMap {
         background-color: transparent;
         border: none;
@@ -325,13 +330,25 @@
         margin: 1% 0% 1% 0%;
         width: 330px;
     }
-    nav {
+
+    .div-place a {
+        margin-right: 2%;
+    }
+
+    /* .div-mail a {
+        margin-right: 2%;
+    } */
+
+    /* .div-media a {
+        margin-right: 2%;
+    } */
+    /* nav {
         margin-left: 4%;
         width: 50%;
     }
     a {
         margin-right: 2%;
-    }
+    } */
     .link-map {
         color: white;
         margin-left: 18%;
