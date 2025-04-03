@@ -4,7 +4,7 @@
 
 .content-carousel {
   text-align: center;
-  margin-bottom: 1.8rem;
+  margin-bottom: 7rem;
 }
 
 .container-carousel {
@@ -30,6 +30,7 @@
   font-style: italic;
   text-align: center;
   margin-bottom: 0.6rem;
+  padding-top: 1rem;
 }
 
 .carousel-images img {
@@ -42,12 +43,15 @@
   border-radius: 0.6rem;
 }
 
+
 .carousel-images {
   border-color: #fff;
   border-style: solid;
   border-width: 0.1rem;
   border-radius: 0.6rem;
   width: 15rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   aspect-ratio: 1/1;
   display: inline-block;
   box-shadow: 0.06rem 0.1rem 0.06rem 0.06rem rgba(0, 0, 0, 0.144);
@@ -67,6 +71,7 @@
 }
 
 .carousel-overlay {
+  color: #fff;
   position: absolute;
   top: 0;
   width: 100%;
@@ -78,7 +83,6 @@
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  color: #fff;
   text-align: center;
 }
 
@@ -98,7 +102,7 @@
   padding: 0.5rem 1rem;
   margin-top: 3rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 1rem;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 }
@@ -117,7 +121,7 @@
 
 .custom-arrow::before { 
   color: #375A9E !important;
-  font-size: 30px;
+  font-size: 2rem !important;
 }
 
 .next-arrow {
@@ -128,46 +132,113 @@
   left: 5rem;
 }
 
-
+.links-button{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1rem;
+  padding: 1.25rem;
+  justify-content: center;
+  margin-top: -1rem;
+}
 /*
-.carousel-button {
-  background-color: #FFA500;
-  color: #fff;
-  margin-top: -3rem;
-  position: relative;
-  z-index: 200;
+.links-button Link {
+  width: 7rem;
+  height: 3rem;
+}*/
+
+.dog-button, .cat-button, .other-button {
+  background-color: #375A9E;
+  color: white;
+  width: 7rem;
+  height: 2.7rem;
   font-size: 1rem;
-  padding: 1rem 1rem;
-  border-radius: 10%;
-  text-align: center;
-}
-
-.carousel-button:button{
-  background-color: orangered;
-  animation: moveInBottom 5s ease-out;
-  animation-fill-mode: backwards;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-}*/
-
-/*
-.next-slick-arrow, .prev-slick-arrow{
-  background-color: #37599e;
-  position: absolute;
-  z-index: 1000;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: 0.5rem 1rem;
+  margin-top: 4rem;
+  border: none;
+  border-radius: 2rem;
   cursor: pointer;
-  padding: 0.6rem;
-  border-radius: 40%;
-  width: 2rem;
+  transition: background 0.3s ease-in-out;
 }
 
-.next-slick-arrow {
-  z-index: 1100 !important;
-  right: 4rem;
+.farm-button {
+  background-color: #375A9E;
+  color: white;
+  width: 10rem;
+  height: 2.7rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-top: 4rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
-.prev-slick-arrow {
-  z-index: 100;
-  left: 5rem;
-}*/
+.dog-button:hover, .cat-button:hover, .farm-button:hover, .other-button:hover {
+  background-color: #FFA500;
+  transition: background 0.3s ease-in-out;
+}
+
+.tips-button {
+  background-color: #FFA500;
+  color: white;
+  height: 2.7rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-top: 4rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.tips-button:hover {
+  background-color: orangered;
+  transition: background 0.3s ease-in-out;
+}
+
+/* large screens */
+@media (min-width: 1440px) {
+
+}
+/* "normal" computer screens*/
+@media (max-width: 1439px) and (min-width: 1024px) {
+}
+/* laptops */
+@media (max-width: 1023px) {
+  .links-button {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem;
+  }
+}
+/* tablets landscape */
+@media (max-width: 1023px) and (min-width: 768px) {
+}
+/* tablets*/
+@media (max-width: 768px) {
+  .links-button{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.1rem;
+  }
+
+  .dog-button, .cat-button, .farm-button, other-button, .tips-button {
+    font-size: 0.9rem;
+  }
+}
+/* smartphones landscape*/
+@media (max-width: 480px) {
+
+  .links-button {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+  }
+
+  .dog-button, .cat-button, .farm-button, other-button, .tips-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+/* smartphones */
+@media (max-width: 320px) {
+
+}

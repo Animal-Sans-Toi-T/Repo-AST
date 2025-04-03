@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CarouselStyles from "./CarouselStyles";
+import { Link } from 'react-router-dom';
 
 const NextArrow = (props) => {
   const { className, style, onClick } = props
@@ -39,8 +40,6 @@ const Caroussel = () => {
       autoplaySpeed: 3000,
       accessibility: true,
       adaptiveHeight: true,
-
-  
   
       responsive: [
         {
@@ -61,8 +60,6 @@ const Caroussel = () => {
     }
   
     
-    
-  
     return (
       
     
@@ -81,15 +78,34 @@ const Caroussel = () => {
                   <img src={item.src} alt={item.alt} className='carousel-image'/>
                   <div className='carousel-overlay'>
                     <p className='carousel-name'>{item.alt}</p>
+                    <Link href="/Adoptables">
                   <button className='carousel-button' type="button">{item.title}</button>
+                  </Link>
                   </div>
                   </div>
                 </div>
               
-              
             ))}
 
           </Slider>
+
+          <div className='links-button'>
+          <Link href="/Adoptables">
+                  <button className='dog-button' type='button'>Chiens</button>
+                  </Link>
+                  <Link href="/Adoptables">
+                  <button className='cat-button' type='button'>Chats</button>
+                  </Link>
+                  <Link href="/Adoptables">
+                  <button className='farm-button' type='button'>Animaux ferme</button>
+                  </Link>
+                  <Link href="/Adoptables">
+                  <button className='other-button' type='button'>Autres</button>
+                  </Link>
+                  <Link href="/Adoptables/Tips">
+                  <button className='tips-button' type='button'>Conseils adoption</button>
+                  </Link>
+                  </div>
           </div>
           </div>
         </div>
