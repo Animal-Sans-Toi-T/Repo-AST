@@ -1,0 +1,443 @@
+* {
+    font-family: 'Comfortaa';
+}
+
+/* SMALL SCREEN */
+@media screen and (max-width: 750px) {
+    .div-MainMap {
+        display: none;
+    }
+    .div-MobileMap{
+        display: none;
+    }
+
+    .footer-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #375A9E;
+        overflow: hidden;
+        color: white;
+    }
+    .container-icon-coordonnees{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 5% 0% 8% 0%;
+    }
+
+    .div-place{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .a-icon-place, .link-map {
+        display: none;
+    }
+    .div-phone, .div-mail, .div-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0% 0% 0%;
+    }
+    .iconPhone, .a-icon-mail, .a-icon-media {
+        padding-bottom: 3%;
+    }
+
+    a.link-media {
+        color: white;
+    }
+    a.link-media:hover{
+        color: orange ;
+        font-weight: 600;
+    }
+
+    a.MailTo-link {
+        color: white;
+    }
+    a.MailTo-link:hover {
+        color: orange ;
+        font-weight: 600;
+    }
+
+
+    .div-horaires {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 8% 0% 8% 0%;
+        /* margin-bottom: 5%; */
+        .text-titre-horaires{
+            padding-bottom: 20%;
+        }
+    }
+    .iconTime {
+        width: 30px;
+    }
+    .subtext-horaires{
+        padding-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    li {
+        list-style: none;
+    }
+    .hr-mobile {
+        color: #9BACCF;
+        height: 1%;
+        width: 80%;
+    }
+
+    .div-text-copyright{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 0% 5% 0%;
+    }
+    .div-infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+    }
+    .p-infos-1 {
+        width: 100%;
+        text-align: center;
+        margin: 5% 0% 3% 0%;
+    }
+    .p-infos-2{
+        width: 100%;
+        text-align: center;
+        margin: 3% 0% 5% 0%;
+    }
+    .copyright{
+        margin-top: 5%;
+        font-size: 10px;
+        color: #9BACCF;
+    }
+}
+
+
+
+
+
+
+
+/* MEDIUM SCREEN */
+@media screen and (min-width: 751px) and (max-width: 1023px){
+    .footer-container{
+        padding: 5% 2% 1% 2%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        gap: 10px;
+        width: 100%;
+        margin: 20px auto;
+        justify-content: space-between;
+        background-color: #375A9E;
+        overflow: hidden;
+        color: white;
+    }
+
+    .container-icon-coordonnees{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        justify-content: center;
+    }
+
+    .div-MainMap {
+        display: none;
+    }
+
+    .div-MobileMap{
+        background-color: transparent;
+        border: none;
+        grid-column: 3;
+    }
+
+    .div-place, .div-phone, .div-mail, .div-media {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 1% 0% 1% 0%;
+        width: 330px;
+    }
+    nav {
+        margin-left: 4%;
+        width: 50%;
+    }
+    a {
+        margin-right: 2%;
+    }
+    .link-map {
+        color: white;
+        margin-left: 16%;
+        width: 310px;
+    }
+    .link-map:hover {
+        color: orange;
+        font-weight: 600;
+    }
+    .container-mobile-map-google {
+        display: none;
+    }
+    .iconPhone{
+        margin-right: 17%;
+    }
+    .a-icon-mail {
+        margin-right: 14%;
+    }
+    .a-icon-media {
+        margin-right: 4%;
+    }
+
+    a.link-media {
+        color: white;
+    }
+    a.link-media:hover{
+        color: orange ;
+        font-weight: 600;
+    }
+
+    a.MailTo-link {
+        color: white;
+    }
+    a.MailTo-link:hover {
+        color: orange ;
+        font-weight: 600;
+    }
+
+    .div-horaires{
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: fit-content;
+    }
+    li {
+        list-style: none;
+    }
+    .subtext-horaires{
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-titre-horaires {
+        margin-bottom: 20%;
+    }
+    .iconTime {
+        margin-top: 3%;
+        width: 30px;
+        
+    }
+    
+    .hr-mobile {
+        display: none;
+    }
+
+
+    .div-text-copyright {
+        margin: 5% 5% 0% 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        grid-column: span 3;
+    }
+    .div-infos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5%;
+        }
+    .copyright{
+        color: #9BACCF;
+    }    
+}
+
+/* LARGE SCREEN */
+@media screen and (min-width: 1024px) {
+    .footer-container{
+        padding-top: 2%;
+        padding-bottom: 1%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        gap: 10px;
+        width: 100%;
+        margin: 20px auto;
+        /* justify-content: space-between; */
+        background-color: #375A9E;
+        overflow: hidden;
+        color: white;
+    }
+    .container-icon-coordonnees{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        justify-content: center;
+    }
+
+    .container-icon-coordonnees nav {
+        margin-left: 4%;
+        width: 50%;
+    }
+
+    .div-MainMap {
+        background-color: transparent;
+        border: none;
+        margin: 0 auto;
+    }
+
+    .div-MobileMap {
+        display: none;
+    }
+
+    .div-place, .div-phone, .div-mail, .div-media {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 1% 0% 1% 0%;
+        width: 330px;
+    }
+
+    .div-place a {
+        margin-right: 2%;
+    }
+
+    /* .div-mail a {
+        margin-right: 2%;
+    } */
+
+    /* .div-media a {
+        margin-right: 2%;
+    } */
+    /* nav {
+        margin-left: 4%;
+        width: 50%;
+    }
+    a {
+        margin-right: 2%;
+    } */
+    .link-map {
+        color: white;
+        margin-left: 16%;
+        width: 310px;
+    }
+    .link-map:hover {
+        color: orange;
+        font-weight: 600;
+    }
+    .container-mobile-map-google {
+        display: none;
+    }
+    .iconPhone{
+        margin-right: 17%;
+    }
+    .a-icon-mail {
+        margin-right: 14%;
+    }
+    .a-icon-media {
+        margin-right: 4%;
+    }
+
+    a.link-media {
+        color: white;
+    }
+    a.link-media:hover{
+        color: orange ;
+        font-weight: 600;
+    }
+
+    a.MailTo-link {
+        color: white;
+    }
+    a.MailTo-link:hover {
+        color: orange ;
+        font-weight: 600;
+    }
+
+    .div-horaires{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: fit-content;
+        justify-content: center;
+    }
+    li {
+        list-style: none;
+    }
+    .subtext-horaires{
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-titre-horaires {
+        margin-bottom: 20%;
+    }
+    .iconTime {
+        margin-top: 3%;
+        width: 30px;
+        
+    }
+    .hr-mobile {
+        display: none;
+    }
+
+
+    .div-text-copyright {
+        margin: 0% 5% 0% 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        grid-column: span 3;
+    }
+    .div-infos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5%;
+        }
+    .copyright{
+        color: #9BACCF;
+    }    
+
+
+    /* .hover-container {
+        position: relative;
+        display: inline-block;
+    }
+    .hover-image{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        width: 250px;
+        height: 200px;
+        }
+        .hover-container:hover .hover-image{
+            opacity: 1;
+            transform: translateX(-50%) translateY(-100%);
+        } */
+    
+}
