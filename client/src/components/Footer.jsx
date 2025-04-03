@@ -1,16 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React, {useEffect, useState} from "react";
+import {createRoot} from "react-dom/client";
 import "../style/Footer.css";
 import iconPlace from "../assets/icon-place.png";
 import iconPhone from "../assets/icon-phone.png";
 import iconMail from "../assets/icon-mail.png";
 import iconMedia from "../assets/icon-media.png";
+import iconInsta from ".././assets/icon-insta.png";
+import iconFcb from "../assets/fcb.png";
+import iconTikTok from "../assets/icon-Tiktok.png";
 import iconTime from "../assets/icon-time.png";
 import HoverImage from "../assets/img-hover.jpg";
 
 import MainMap from "./MainMapGoogle.jsx";
 import MobileMap from "./MobileMapGoogle.jsx";
 import MailTo from "./MailTo.jsx";
+
 
 const Footer = () => {
     return (
@@ -20,7 +24,7 @@ const Footer = () => {
                 {/* COORDONNEES */}
                 <nav className="container-icon-coordonnees">
                     <div className="div-place">
-                        <a className="a-icon-place" href=""><img className="img-icon iconPlace" src={iconPlace} alt="Icon Place" /></a>
+                        <a className="a-icon-place" href=""><img className="img-icon-place iconFooter" src={iconPlace} alt="Icône Place" /></a>
                         <a className="link-map" href="https://maps.app.goo.gl/oJSxgZzXtuabdbPz5">Rue de Huy 188, 4317 Faimes</a>
                         <div className="container-mobile-map-google">
                             < MobileMap/>
@@ -28,20 +32,24 @@ const Footer = () => {
                     </div>
                         
                     <div className="div-phone">
-                        <img className="img-icon iconPhone" src={iconPhone} alt="Icon Phone" />
+                        <img className="img-icon-phone iconFooter" src={iconPhone} alt="Icône Phone" />
                         <p>0478 572 660</p>
                     </div>
 
                     <div className="div-mail">
-                        <a className="a-icon-mail" href=""><img className="img-icon iconMail" src={iconMail} alt="Icon e-mail" /></a>
+                        <a className="a-icon-mail" href=""><img className="img-icon-mail iconFooter" src={iconMail} alt="Icône e-mail" /></a>
                         <MailTo className="MailTo-link" email="info@animal-sans-toit.be" subject="Demande d'informations" body="Bonjour,">
                             Contactez-nous
                         </MailTo>
                     </div>
 
                     <div className="div-media">
-                        <a className="a-icon-media" href="https://www.facebook.com/animalsanstoit/?locale=fr_FR"><img className="img-icon iconMedia" src={iconMedia} alt="Icon Media" /></a>
-                        <a className="link-media" href="https://www.facebook.com/animalsanstoit/?locale=fr_FR">Restons connectés</a>
+                        <div className="div-icon-media">
+                            <img className="img-icon-insta iconFooter" src={iconInsta} alt="Instagram" />
+                            <img className="img-icon-fcb iconFooter" src={iconFcb} alt="Facebook" />
+                            <img className="img-icon-TikTok iconFooter" src={iconTikTok} alt="TikTok" />
+                        </div>
+                        <a className="link-media" href="#" >Restons connectés</a>
                     </div>
                 </nav>
 
@@ -58,7 +66,7 @@ const Footer = () => {
                 {/* HORAIRES */}
                 <hr className="hr-mobile" />
                 <div className="div-horaires">
-                    <img className="img-icon iconTime" src={iconTime} alt="Horaires" />
+                    <img className="img-icon-time iconFooter" src={iconTime} alt="Horaires" />
                     <ul className="subtext-horaires">
                         <li>14H - 17H</li>
                         <li>tous les jours</li>
