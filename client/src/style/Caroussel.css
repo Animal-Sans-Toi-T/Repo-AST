@@ -51,17 +51,66 @@
   aspect-ratio: 1/1;
   display: inline-block;
   box-shadow: 0.06rem 0.1rem 0.06rem 0.06rem rgba(0, 0, 0, 0.144);
+  position: relative;
+  overflow: hidden;
 }
 
-.carousel-image:hover {
-  color: #FFA500;
-  background-color: #37599e;
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.6rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-images:hover .carousel-image {
+  opacity: 0.5;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  color: #fff;
+  text-align: center;
+}
+
+.carousel-images:hover .carousel-overlay {
+  opacity: 1;
+}
+
+.carousel-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.carousel-button {
+  background-color: #FFA500;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-top: 3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.carousel-button:hover {
+  background-color: orangered;
 }
 
 .custom-arrow {
+  color: #375A9E !important;
   width: 4rem;
   height: 4rem;
-  color: #375A9E !important;
   border-radius: 50%;
   z-index: 10;
 }
@@ -80,12 +129,7 @@
 }
 
 
-
-.container-carousel:hover{
-  opacity: 1;
-}
-
-
+/*
 .carousel-button {
   background-color: #FFA500;
   color: #fff;
@@ -103,7 +147,7 @@
   animation: moveInBottom 5s ease-out;
   animation-fill-mode: backwards;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-}
+}*/
 
 /*
 .next-slick-arrow, .prev-slick-arrow{

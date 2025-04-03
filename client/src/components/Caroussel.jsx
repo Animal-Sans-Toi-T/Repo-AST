@@ -79,8 +79,10 @@ const Caroussel = () => {
                 
                 <div className='carousel-images'>
                   <img src={item.src} alt={item.alt} className='carousel-image'/>
+                  <div className='carousel-overlay'>
+                    <p className='carousel-name'>{item.alt}</p>
                   <button className='carousel-button' type="button">{item.title}</button>
-                    
+                  </div>
                   </div>
                 </div>
               
