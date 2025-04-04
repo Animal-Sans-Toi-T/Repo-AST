@@ -51,7 +51,7 @@
         padding-bottom: 3%;
     }
 
-
+    
     .div-icon-media{
         margin-bottom: 3%;
     }
@@ -73,8 +73,9 @@
      /* BUTTON LINK */
     .button-media{
         padding: 0;
-        width: 120%;
+        width: fit-content;
         display: flex;
+        flex-direction: column;
         align-items: center;
         background-color: #375A9E;
         color: white;
@@ -85,8 +86,7 @@
     }
     .div-icon-media{
         display: flex;
-        width: 6em;
-        margin-right: 3%;
+        width: fit-content;
     }
     .button-media:hover{
         color: orange;
@@ -94,7 +94,8 @@
     }
 
     .div-block-linkMedia{
-        width: 42vw;
+        width: 60vw;
+        text-align: center;
         margin-top: 2%;
         padding: 3% 2% 3% 2%;
         color:#375A9E;
@@ -102,6 +103,12 @@
         border: white solid 2px;
         border-radius: 5px;
     } 
+
+    .div-link-media{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .div-aLinkMedia{
         display: flex;
         justify-content: center;
@@ -112,6 +119,7 @@
     .aLinkMedia{
         color: #375A9E;
         font-weight: 600;
+        margin: 0% 3% 0% 3%;
     }
     .aLinkMedia:hover{
         color: orange;
