@@ -1,6 +1,8 @@
 * {
     font-family: 'Comfortaa';
+
 }
+
 
 /* SMALL SCREEN */
 @media screen and (max-width: 750px) {
@@ -41,10 +43,18 @@
         align-items: center;
         padding: 10% 0% 0% 0%;
     }
-    .iconPhone, .a-icon-mail, .a-icon-media {
+
+    .iconFooter{
+        width: 25px;
+    }
+    .img-icon-phone, .a-icon-mail, .a-icon-media {
         padding-bottom: 3%;
     }
 
+    
+    .div-icon-media{
+        margin-bottom: 3%;
+    }
     a.link-media {
         color: white;
     }
@@ -52,13 +62,71 @@
         color: orange ;
         font-weight: 600;
     }
-
     a.MailTo-link {
         color: white;
     }
     a.MailTo-link:hover {
         color: orange ;
         font-weight: 600;
+    }
+
+     /* BUTTON LINK */
+    .button-media{
+        padding: 0;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #375A9E;
+        color: white;
+    }
+    p.p-button-media {
+        font-size: 15px;
+        text-decoration: underline;
+    }
+    .div-icon-media{
+        display: flex;
+        width: fit-content;
+        margin-bottom: 8%;
+    }
+    .button-media:hover{
+        color: orange;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .div-block-linkMedia{
+        width: 60vw;
+        text-align: center;
+        margin-top: 2%;
+        padding: 3% 2% 3% 2%;
+        color:#375A9E;
+        background-color: white;
+        border: white solid 2px;
+        border-radius: 5px;
+    } 
+
+    .div-link-media{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .div-aLinkMedia{
+        display: flex;
+        justify-content: center;
+    }
+    .p-linkMedia{
+        margin-bottom: 2%;
+    }
+    .aLinkMedia{
+        color: #375A9E;
+        font-weight: 600;
+        margin: 0% 3% 0% 3%;
+    }
+    .aLinkMedia:hover{
+        color: orange;
+        font-weight: 600;
+        cursor: pointer;
     }
 
 
@@ -72,9 +140,6 @@
         .text-titre-horaires{
             padding-bottom: 20%;
         }
-    }
-    .iconTime {
-        width: 30px;
     }
     .subtext-horaires{
         padding-top: 1em;
@@ -149,6 +214,8 @@
         flex-direction: column;
         width: fit-content;
         justify-content: center;
+        margin-left: 4%;
+        width: 50%;
     }
 
     .div-MainMap {
@@ -168,17 +235,12 @@
         margin: 1% 0% 1% 0%;
         width: 330px;
     }
-    nav {
-        margin-left: 4%;
-        width: 50%;
-    }
-    a {
-        margin-right: 2%;
-    }
+    
     .link-map {
         color: white;
-        margin-left: 16%;
+        margin-left: 18%;
         width: 310px;
+        margin-left: 19%;
     }
     .link-map:hover {
         color: orange;
@@ -187,14 +249,21 @@
     .container-mobile-map-google {
         display: none;
     }
-    .iconPhone{
-        margin-right: 17%;
+
+
+    .iconFooter{
+        width: 25px;
+    }
+    .img-icon-phone{
+        margin-right: 19%;
     }
     .a-icon-mail {
-        margin-right: 14%;
+        margin-right: 19%;
     }
-    .a-icon-media {
-        margin-right: 4%;
+
+    .div-icon-media{
+        display: flex;
+        margin-right: 5%;
     }
 
     a.link-media {
@@ -204,6 +273,59 @@
         color: orange ;
         font-weight: 600;
     }
+
+
+    /* BUTTON LINK */
+    button.button-media{
+        padding: 0;
+        width: 120%;
+        display: flex;
+        align-items: center;
+        background-color: #375A9E;
+        color: white;
+    }
+    p.p-button-media {
+        font-size: 15px;
+        text-decoration: underline;
+    }
+    .div-icon-media{
+        display: flex;
+        width: 6em;
+        margin-right: 3%;
+    }
+    .button-media:hover{
+        color: orange;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .div-block-linkMedia{
+        width: 40vw;
+        margin-top: 2%;
+        padding: 3% 2% 3% 2%;
+        color:#375A9E;
+        background-color: white;
+        border: white solid 2px;
+        border-radius: 5px;
+    } 
+    .div-aLinkMedia{
+        display: flex;
+        justify-content: center;
+    }
+    .p-linkMedia{
+        margin-bottom: 2%;
+    }
+    .aLinkMedia{
+        color: #375A9E;
+        font-weight: 600;
+        margin: 0% 3% 0% 3%;
+    }
+    .aLinkMedia:hover{
+        color: orange;
+        font-weight: 600;
+    }
+
+
 
     a.MailTo-link {
         color: white;
@@ -235,10 +357,8 @@
     .text-titre-horaires {
         margin-bottom: 20%;
     }
-    .iconTime {
-        margin-top: 3%;
-        width: 30px;
-        
+    .img-icon-time {
+        margin-top: 3%;        
     }
     
     .hr-mobile {
@@ -278,7 +398,6 @@
         gap: 10px;
         width: 100%;
         margin: 20px auto;
-        /* justify-content: space-between; */
         background-color: #375A9E;
         overflow: hidden;
         color: white;
@@ -318,23 +437,9 @@
         margin-right: 2%;
     }
 
-    /* .div-mail a {
-        margin-right: 2%;
-    } */
-
-    /* .div-media a {
-        margin-right: 2%;
-    } */
-    /* nav {
-        margin-left: 4%;
-        width: 50%;
-    }
-    a {
-        margin-right: 2%;
-    } */
     .link-map {
         color: white;
-        margin-left: 16%;
+        margin-left: 18%;
         width: 310px;
     }
     .link-map:hover {
@@ -344,21 +449,76 @@
     .container-mobile-map-google {
         display: none;
     }
-    .iconPhone{
-        margin-right: 17%;
+
+    .iconFooter{
+        width: 25px;
+    }
+
+
+    
+    .img-icon-phone{
+        margin-right: 20%;
     }
     .a-icon-mail {
-        margin-right: 14%;
+        margin-right: 20%;
     }
-    .a-icon-media {
-        margin-right: 4%;
+    .div-icon-media{
+        margin-right: 4.5%;
     }
+
 
     a.link-media {
         color: white;
     }
     a.link-media:hover{
         color: orange ;
+        font-weight: 600;
+    }
+
+/* BUTTON LINK */
+    .button-media{
+        width: 120%;
+        display: flex;
+        align-items: center;
+        background-color: #375A9E;
+        color: white;
+    }
+    p.p-button-media {
+        font-size: 15px;
+        text-decoration: underline;
+    }
+    .div-icon-media{
+        display: flex;
+
+        width: 6em;
+        margin-right: 3%;
+    }
+    .button-media:hover{
+        color: orange;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .div-block-linkMedia{
+        width: 25vw;
+        margin-top: 2%;
+        padding: 3% 2% 3% 2%;
+        color:#375A9E;
+        background-color: white;
+        border: white solid 2px;
+        border-radius: 5px;
+    }
+    
+    .p-linkMedia{
+        margin-bottom: 2%;
+    }
+    .aLinkMedia{
+        color: #375A9E;
+        font-weight: 600;
+        margin: 0% 3% 0% 3%;
+    }
+    .aLinkMedia:hover{
+        color: orange;
         font-weight: 600;
     }
 
@@ -369,6 +529,9 @@
         color: orange ;
         font-weight: 600;
     }
+
+
+
 
     .div-horaires{
         margin: 0 auto;
@@ -390,9 +553,8 @@
     .text-titre-horaires {
         margin-bottom: 20%;
     }
-    .iconTime {
+    .img-icon-time {
         margin-top: 3%;
-        width: 30px;
         
     }
     .hr-mobile {
@@ -419,25 +581,4 @@
     .copyright{
         color: #9BACCF;
     }    
-
-
-    /* .hover-container {
-        position: relative;
-        display: inline-block;
-    }
-    .hover-image{
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 0;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        width: 250px;
-        height: 200px;
-        }
-        .hover-container:hover .hover-image{
-            opacity: 1;
-            transform: translateX(-50%) translateY(-100%);
-        } */
-    
 }
