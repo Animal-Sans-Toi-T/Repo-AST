@@ -1,0 +1,93 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+    gap: 0.5em;
+}
+
+.checkNewsletterBlock {
+    display: flex; 
+    gap: 0.7em;
+    .checkboxNewsletter {
+        max-width: fit-content;
+    }
+}
+
+.RGPD {
+    display: flex; 
+    gap: 0.7em;
+    width: 100%; 
+    .checkboxRGPD {
+        max-width: fit-content;
+    }
+}
+
+.send {
+    background-color: orange;
+    padding: 1em;
+    border-radius: 0.5em;
+    width: fit-content;
+    align-self: center;
+    color: white; 
+}
+
+.textFormsContainer {
+    /* padding: 5%; */
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    gap: 1em;
+
+}
+
+.radioButtonsBlock {
+display: flex;
+flex-direction: row;
+}
+
+.RGPD {
+    max-width:80%;
+    
+}
+
+.radioButton {
+    width: 20px;
+    height: 20px;
+    /* padding: 50%; */
+    margin: 2px;
+}
+
+input {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    width: 100%;
+    border-color: var(--bleu-clair);
+
+    ::placeholder {
+        color: var(--bleu-foncé);
+    }
+}
+
+textarea {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    width: 100%;
+    max-width: 100%;
+    height: 8em;
+    border-color: var(--bleu-clair);
+
+    ::placeholder {
+        color: var(--bleu-foncé);
+    }
+}
+
+.radioButtonsContainer {
+    /* padding: 0.5em; */
+    display: flex;
+    flex-direction: column;
+    /* margin: 5%; */
+    gap: 1em;
+}
+
