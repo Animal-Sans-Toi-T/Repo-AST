@@ -87,10 +87,12 @@
     .div-icon-media{
         display: flex;
         width: fit-content;
+        margin-bottom: 8%;
     }
     .button-media:hover{
         color: orange;
         font-weight: 600;
+        cursor: pointer;
     }
 
     .div-block-linkMedia{
@@ -124,6 +126,7 @@
     .aLinkMedia:hover{
         color: orange;
         font-weight: 600;
+        cursor: pointer;
     }
 
 
