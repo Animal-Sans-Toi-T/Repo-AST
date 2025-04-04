@@ -24,24 +24,13 @@ function SocialLinks({ iconInsta, iconFcb, iconTikTok }) {
             {/* Affichage du menu au clic */}
             {showMenu && (
                 <div className="div-block-linkMedia">
-                    <ul className="ul-link-media">
-                        <li className="firstLi-ulLinkMedia">Rejoignez-nous sur nos réseaux sociaux :</li>
-                        <li className="secondLi-ulLinkMedia">
-                            <a className="aLiUlLinkMedia" href="https://www.facebook.com/animalsanstoit/?locale=fr_FR">
-                                Facebook
-                            </a>
-                        </li>
-                        <li className="thirdLi-ulLinkMedia">
-                            <a className="aLiUlLinkMedia" href="https://www.instagram.com/refuge.animalsanstoit/?fbclid=IwY2xjawJbGsxleHRuA2FlbQIxMAABHQLtBUCuupGPjo8K5eAzMRFfzdohufcTre5mkiz8_4AEwyWD-wF2fAnnbg_aem_uWk_Po2AcFfRfuwLHh35AA#">
-                                Instagram
-                            </a>
-                        </li>
-                        <li className="fourthLi-ulLinkMedia">
-                            <a className="aLiUlLinkMedia" href="https://www.tiktok.com/@animal.sans.toit?_t=ZN-8vCN6WiyUqc&_r=1">
-                                Tiktok
-                            </a>
-                        </li>
-                    </ul>
+                    <p className="p-linkMedia">Rejoignez-nous sur nos réseaux sociaux :</p>
+
+                    <div className="div-aLinkMedia">
+                        <a className="aLinkMedia" href="https://www.facebook.com/animalsanstoit/?locale=fr_FR">Facebook</a>
+                        <a className="aLinkMedia" href="https://www.instagram.com/refuge.animalsanstoit/?fbclid=IwY2xjawJbGsxleHRuA2FlbQIxMAABHQLtBUCuupGPjo8K5eAzMRFfzdohufcTre5mkiz8_4AEwyWD-wF2fAnnbg_aem_uWk_Po2AcFfRfuwLHh35AA#">Instagram</a>
+                        <a className="aLinkMedia" href="https://www.tiktok.com/@animal.sans.toit?_t=ZN-8vCN6WiyUqc&_r=1">Tiktok</a>
+                    </div>
                 </div>
             )}
         </div>

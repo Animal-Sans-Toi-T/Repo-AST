@@ -1,14 +1,14 @@
-.div-block-linkMedia {
+/* .div-block-linkMedia {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
     transform: scaleY(0);
     transition: opacity 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
-}
+} */
 
 /* Quand showMenu est `true`, la div s'affiche avec une animation fluide */
-.div-block-linkMedia.active {
+/* .div-block-linkMedia.active {
     opacity: 1;
-    max-height: 200px; /* Ajuste selon ton contenu */
+    max-height: 200px; 
     transform: scaleY(1);
-}
+} */
