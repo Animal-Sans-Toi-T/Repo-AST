@@ -296,10 +296,11 @@
     .button-media:hover{
         color: orange;
         font-weight: 600;
+        cursor: pointer;
     }
 
     .div-block-linkMedia{
-        width: 42vw;
+        width: 40vw;
         margin-top: 2%;
         padding: 3% 2% 3% 2%;
         color:#375A9E;
@@ -495,30 +496,21 @@
     .button-media:hover{
         color: orange;
         font-weight: 600;
-        /* background-color: #9BACCF;
-        border: solid 2px white;
-        border-radius: 5px;
-        padding: 3%;
-        color: white; */
+        cursor: pointer;
     }
 
     .div-block-linkMedia{
+        width: 25vw;
         margin-top: 2%;
+        padding: 3% 2% 3% 2%;
         color:#375A9E;
         background-color: white;
         border: white solid 2px;
         border-radius: 5px;
-        transform: scaleY(1);
-        transition: opacity 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
     }
-    .firstLi-ulLinkMedia{
-        font-weight: 600;
-        font-size: 15px;
-        padding: 2%;
-    }
-    .secondLi-ulLinkMedia, .thirdLi-ulLinkMedia, .fourthLi-ulLinkMedia {
-        padding-bottom: 3% ;
-        padding-left: 3%;
+    
+    .p-linkMedia{
+        margin-bottom: 2%;
     }
     .aLinkMedia{
         color: #375A9E;
