@@ -5,29 +5,23 @@ import "./RGPD.jsx";
 import RGPD from './RGPD.jsx';
 import axios from "axios";
 
+
+
+// TODO: checker la sécu de l'envoi d'emails
+
 function ContactForm() {
 
-    // const [firstname, setFirstname] = useState("");
-    // const [lastname, setLastname] = useState("");
-    // const [street, setStreet] = useState("");
-    // const [zipcode, setZipcode] = useState("");
-    // const [city, setCity] = useState("");
-    // const [country, setCountry] = useState("");
-    // const [phone, setPhone] = useState("");
-    // const [email, setEmail] = useState("");
-    // const [inquiry, setInquiry] = useState("");
-    // const [subject, setSubject] = useState("");
-
     const [formInputs, setFormInputs] = useState({
+        subject:'',
         lastName: '',
-        // firstName: '',
-        // street: '',
-        // zipCode:'',
-        // city:'',
-        // country:'',
-        // phone:'',
-        // email:'',
-        // inquiry:''
+        firstName: '',
+        street: '',
+        zipCode:'',
+        city:'',
+        country:'',
+        phone:'',
+        email:'',
+        inquiry:''
     });
 
 
@@ -35,47 +29,47 @@ function ContactForm() {
         setFormInputs({ ...formInputs, lastName: e.target.value })
     };
 
-    // const handleFirstnameChange = (e) => {
-    //     setFormInputs({ ...formInputs, firstName: e.target.value })
-    // };
+    const handleFirstnameChange = (e) => {
+        setFormInputs({ ...formInputs, firstName: e.target.value })
+    };
 
-    // const handleStreetChange = (e) => {
-    //     setFormInputs({ ...formInputs, street: e.target.value })
-    // };
+    const handleStreetChange = (e) => {
+        setFormInputs({ ...formInputs, street: e.target.value })
+    };
 
-    // const handleZipCodeChange = (e) => {
-    //     setFormInputs({ ...formInputs, zipCode: e.target.value })
-    // };
+    const handleZipCodeChange = (e) => {
+        setFormInputs({ ...formInputs, zipCode: e.target.value })
+    };
 
-    // const handleCityChange = (e) => {
-    //     setFormInputs({ ...formInputs, city: e.target.value })
-    // };
-
-
-    // const handleCountryChange = (e) => {
-    //     setFormInputs({ ...formInputs, country: e.target.value })
-    // };
+    const handleCityChange = (e) => {
+        setFormInputs({ ...formInputs, city: e.target.value })
+    };
 
 
-    // const handlePhoneChange = (e) => {
-    //     setFormInputs({ ...formInputs, phone: e.target.value })
-    // };
+    const handleCountryChange = (e) => {
+        setFormInputs({ ...formInputs, country: e.target.value })
+    };
 
 
-    // const handleEmailChange = (e) => {
-    //     setFormInputs({ ...formInputs, email: e.target.value })
-    // };
+    const handlePhoneChange = (e) => {
+        setFormInputs({ ...formInputs, phone: e.target.value })
+    };
 
 
-    // const handleInquiryChange = (e) => {
-    //     setFormInputs({ ...formInputs, inquiry: e.target.value })
-    // };
+    const handleEmailChange = (e) => {
+        setFormInputs({ ...formInputs, email: e.target.value })
+    };
 
 
-    // const handleSubject = (e, subjectName) => {
-    //     setFormInputs({ ...formInputs, generalSubject: true })
+    const handleInquiryChange = (e) => {
+        setFormInputs({ ...formInputs, inquiry: e.target.value })
+    };
 
-    // }
+    // WORKS - value of the selected radio button
+    const handleSubjectChange =(e) => {
+        setFormInputs({ ...formInputs, subject: e.target.value })
+        console.log(formInputs);
+    }
 
 
     const apiemail = axios.create({
@@ -85,96 +79,58 @@ function ContactForm() {
     const submitForm = async (e) => {
         e.preventDefault();
         try {
+            console.log(formInputs);
             const response = await apiemail.post("/contact", formInputs);
-            alert("Email sent");
+            alert("Votre formulaire a bien été envoyé :)");
         } catch (error) {
-            alert(error + "Error, email not sent");
+            alert("Il y a eu un soucis lors de l'envoi de votre formulaire, il n'a pas pu être envoyé (" + error +")");
         }
     };
 
-    // const submitForm = (formInputs) => {
-    //     setFormInputs(formInputs);
-    // }
-
-    // const transporter = nodemailer.createTransport({
-    //     service: 'Gmail',
-    //     auth: { 
-    //       user: process.env.EMAIL,
-    //       pass: process.env.PASSWORD
-    //     }
-    //   });
-
-
-    //TODO: check validity of input 
-    // check security 
-    // check my axios post 
-
-    // const submitForm = async (e) => {
-    //     e.preventDefault();
-
-    //     try {
-    //         await axios.post('/contact', {
-
-    //             email, 
-    //         });
-    //         showSuccess();
-
-    //         try {
-    //             const response = await axios.post(`http://localhost:5173/api/contact`, completedForm);
-    //             console.log("Response:", response.data);
-    //             alert("Votre formulaire a bien été envoyé");
-    //         } catch (error) {
-    //             console.error("Error posting data:", error);
-    //         }
-
-    //     }
-    // };
-
-
-
-    // RECAP': pour le moment, reprend bien le name de l'input et la e.target (fonctionne avec le mailto) - à implémenter avec nodemailer
 
     return (
         <>
             <form className='contactForm' onSubmit={submitForm}>
 
 
-                {/* EMI: à mon avis tu devras mettre l'adresse email dans value; après à voir si par exemple la personne change son choix, si la valeur n'est pas encodée de toute façon dans le setFormInput... a mon avis il faudra faire une logique de true/false avec des if pour dtminer où envoyer */}
-                {/* <div className='radioButtonsContainer'>
+                {/* EMI: à mon avis tu devras mettre l'adresse email dans value; 
+                après à voir si par exemple la personne change son choix, si la valeur n'est pas encodée de toute façon dans le setFormInput... 
+                a mon avis il faudra faire une logique de true/false avec des if pour dtminer où envoyer */}
+                <div onChange={handleSubjectChange} className='radioButtonsContainer'>
                     <h3>Ma demande concerne:</h3>
                     <div className='radioButtonsBlock'>
-                        <input className='radioButton' type="radio" name="generalSubject" id="général" onChange={(e) => handleSubject(e,)} value={false} />
+                        <input className='radioButton' type="radio" name="subject" id="général" value="général" />
                         <label for="plaintes">Une information générale</label>
                     </div>
                     <div className='radioButtonsBlock'>
-                        <input className="radioButton" type="radio" name="subject" id="maltraitance" value="plaintes" />
+                        <input className="radioButton" type="radio" name="subject" id="maltraitance" value="maltraitance" />
                         <label for="plaintes">Une maltraitance</label>
                     </div>
                     <div className='radioButtonsBlock'>
-                        <input className="radioButton" type="radio" name="subject" id="présidente" value="plaintes" />
+                        <input className="radioButton" type="radio" name="subject" id="présidente" value="présidente" />
                         <label for="plaintes">Contact avec la présidente</label>
                     </div>
                     <div className='radioButtonsBlock'>
-                        <input className='radioButton' type="radio" name="generalSubject" id="général" onChange={(e) => handleSubject(e,)} value={false} />
+                        <input className='radioButton' type="radio" name="subject" id="parrainage" value="parrainage" />
                         <label for="plaintes">Le parrainage</label>
                     </div>
                     <div className='radioButtonsBlock'>
-                        <input className='radioButton' type="radio" name="generalSubject" id="général" onChange={(e) => handleSubject(e,)} value={false} />
+                        <input className='radioButton' type="radio" name="subject" id="membres" value="membres" />
                         <label for="plaintes">Le service "membres"</label>
                     </div>
                     <div className='radioButtonsBlock'>
-                        <input className='radioButton' type="radio" name="generalSubject" id="général" onChange={(e) => handleSubject(e,)} value={false} />
+                        <input className='radioButton' type="radio" name="subject" id="bénévolat" value="bénévolat" />
                         <label for="plaintes">Le bénévolat</label>
                     </div>
                     <div className='radioButtonsBlock'>
-                        <input className='radioButton' type="radio" name="generalSubject" id="général" onChange={(e) => handleSubject(e,)} value={false} />
+                        <input className='radioButton' type="radio" name="subject" id="site internet" value="site internet" />
                         <label for="plaintes">Le site internet</label>
                     </div>
-                </div> */}
+                </div>
 
                 <div className='textFormsContainer'>
                     <label>Nom*:<input type="text" name="lastName" placeholder="Nom *" onChange={(e) => handleLastnameChange(e)} required /></label>
-                    {/* <label>Prénom*:<input type="text" name="firstName" placeholder='Prénom *' onChange={(e) => handleFirstnameChange(e)} required /></label>
+                    <label>Prénom*:<input type="text" name="firstName" placeholder='Prénom *' onChange={(e) => handleFirstnameChange(e)} required /></label>
                     <label>Rue:
                         <input type="text" name="street" placeholder='Rue' onChange={(e) => handleStreetChange(e)} required /></label>
                     <label>Code postal:
@@ -188,8 +144,8 @@ function ContactForm() {
                     <label>Email*:
                         <input type="email" name="email" placeholder='Email' onChange={(e) => handleEmailChange(e)} required /></label>
                     <label>Demande*: <br />
-                        <textarea type="textarea" placeholder='Votre demande/question' minlength="4"
-                            maxlength="250" size="50" name="inquiry" onChange={(e) => handleInquiryChange(e)} required /></label> */}
+                        <textarea type="textarea" placeholder='Votre demande/question' minLength="4"
+                            maxlLength="250" size="50" name="inquiry" onChange={(e) => handleInquiryChange(e)} required /></label>
                 </div>
 
                 {/* <div className='checkNewsletterBlock'>
