@@ -7,7 +7,11 @@ import axios from "axios";
 
 
 
-// TODO: checker la sécu de l'envoi d'emails
+// TODO: 
+// - checker la sécu de l'envoi d'emails
+// - envoi automatique de la newsletter à créer via je suppose un ajout dans la DB (pour le moment le check ne fait rien)
+// - voir si on laisse tous les champs du formulaire en require
+
 
 function ContactForm() {
 
@@ -92,12 +96,8 @@ function ContactForm() {
         <>
             <form className='contactForm' onSubmit={submitForm}>
 
-
-                {/* EMI: à mon avis tu devras mettre l'adresse email dans value; 
-                après à voir si par exemple la personne change son choix, si la valeur n'est pas encodée de toute façon dans le setFormInput... 
-                a mon avis il faudra faire une logique de true/false avec des if pour dtminer où envoyer */}
-                <div onChange={handleSubjectChange} className='radioButtonsContainer'>
                     <h3>Ma demande concerne:</h3>
+                <div onChange={handleSubjectChange} className='radioButtonsContainer'>
                     <div className='radioButtonsBlock'>
                         <input className='radioButton' type="radio" name="subject" id="général" value="général" />
                         <label for="plaintes">Une information générale</label>
@@ -132,15 +132,15 @@ function ContactForm() {
                     <label>Nom*:<input type="text" name="lastName" placeholder="Nom *" onChange={(e) => handleLastnameChange(e)} required /></label>
                     <label>Prénom*:<input type="text" name="firstName" placeholder='Prénom *' onChange={(e) => handleFirstnameChange(e)} required /></label>
                     <label>Rue:
-                        <input type="text" name="street" placeholder='Rue' onChange={(e) => handleStreetChange(e)} required /></label>
+                        <input type="text" name="street" placeholder='Rue' onChange={(e) => handleStreetChange(e)}/></label>
                     <label>Code postal:
-                        <input type="number" name="zipCode" placeholder='Code Postal' onChange={(e) => handleZipCodeChange(e)} required /></label>
+                        <input type="number" name="zipCode" placeholder='Code Postal' onChange={(e) => handleZipCodeChange(e)}/></label>
                     <label>Localité:
-                        <input type="text" name="city" placeholder='Localité' onChange={(e) => handleCityChange(e)} required /></label>
+                        <input type="text" name="city" placeholder='Localité' onChange={(e) => handleCityChange(e)}/></label>
                     <label>Pays:
-                        <input type="text" name="country" placeholder='Pays' onChange={(e) => handleCountryChange(e)} required /></label>
+                        <input type="text" name="country" placeholder='Pays' onChange={(e) => handleCountryChange(e)}/></label>
                     <label>Téléphone:
-                        <input type="tel" name="phone" placeholder='Numéro de téléphone' onChange={(e) => handlePhoneChange(e)} required /></label>
+                        <input type="tel" name="phone" placeholder='Numéro de téléphone' onChange={(e) => handlePhoneChange(e)}/></label>
                     <label>Email*:
                         <input type="email" name="email" placeholder='Email' onChange={(e) => handleEmailChange(e)} required /></label>
                     <label>Demande*: <br />
@@ -148,7 +148,7 @@ function ContactForm() {
                             maxlLength="250" size="50" name="inquiry" onChange={(e) => handleInquiryChange(e)} required /></label>
                 </div>
 
-                {/* <div className='checkNewsletterBlock'>
+                <div className='checkNewsletterBlock'>
                     <input className='checkboxNewsletter' type="checkbox" id="newsletter" name="newsletter" />
                     <label for="newsletter">Je souhaite recevoir les newsletters</label>
                 </div>
@@ -156,7 +156,7 @@ function ContactForm() {
                 <div className='RGPD'>
                     <input className='checkboxRGPD' type="checkbox" id="RGPD" name="RGPD" required />
                     <label for="RGPD">J'accepte les RGPD  <RGPD /></label>
-                </div> */}
+                </div>
 
 
                 <button className="send" type="submit">Envoyer</button>

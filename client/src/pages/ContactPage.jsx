@@ -1,6 +1,7 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
 import Header from '../components/Header';
+import Footer from "../components/Footer";
 import ContactForm from '../components/ContactForm';
 import "../style/ContactForm.css";
 import "../style/ContactPage.css";
@@ -42,11 +43,12 @@ function ContactPage() {
                         <p>info@animal-sans-toit.com</p></div>
 
                         <div className='infoBlock'><h3>Horaires</h3>
-                        <p>Tous les jours (y compris fériés)
-                        14h00 à 17h00 et éventuellement sur rendez-vous</p></div>
+                        <p>Tous les jours (y compris fériés)<br/>
+                        14h00 à 17h00 <br/>
+                        et éventuellement sur rendez-vous</p></div>
 
                         <div className='infoBlock'><h3>Compte bancaire</h3>
-                        <p>Iban: BE24 0019 9777 7038   BNP Paribas Fortis <br/>
+                        <p>Iban: BE24 0019 9777 7038 (BNP Paribas Fortis) <br/>
                         Bic: GEBA BEBB</p>
 
                         <p className='smallCharacters'>Le compte BE48 1270 6282 4727 (Beobank) reste valable. <br/>
@@ -65,6 +67,8 @@ function ContactPage() {
                     </div>
                 </div>
             </div>
+
+<Footer/>
         </>
     )
 }

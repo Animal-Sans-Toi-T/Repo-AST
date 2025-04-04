@@ -1,5 +1,5 @@
 .ContactPageContainer {
-    max-width: 80%;
+    max-width: 90%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -10,16 +10,17 @@
 
     .contactInfoCard {
 
-        width: 50%;
+        /* width: 50%; */
         border-radius: 2px;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        align-items: center;
 
         h2 {
             padding: 5%;
         }
 
         .contactInfo {
-            padding: 5%;
+            margin: 5%;
             display: flex;
             flex-direction: column;
             gap: 1em;
@@ -31,7 +32,8 @@
             .infoBlock {
                 display: flex;
                 flex-direction: column;
-                gap: 0.5em;
+                gap: 0.7em;
+                line-height: 1.2;
             }
         }
 
@@ -39,13 +41,70 @@
 
     .ContactFormCard {
         /* background-color: rgb(196, 114, 149); */
-        width: 50%;
+        /* width: 50%; */
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
 
         h2 {
             padding: 5%;
         }
 
+    }
+
+}
+
+/* large screens /
+@media (min-width: 1440px)
+/ "normal" computer screens/
+@media (max-width: 1439px) and (min-width: 1024px) {
+
+/ laptops /
+@media (max-width: 1023px) {
+
+/ tablets landscape /
+@media (max-width: 1023px) and (min-width: 768px) {
+
+/ tablets/
+@media (max-width: 768px) {
+
+/ smartphones landscape/
+@media (max-width: 480px) {
+
+/ smartphones */
+/* @media (max-width: 320px) { */
+
+
+
+
+
+/* TODO: ajouter un bouton qui apparait au-dessus de la page en cas de flexwrap pour aller aux coordonnées complètes  */
+
+@media (min-width: 769px){
+    .contactInfoCard {
+        width: 50%;
+    }
+
+    .ContactFormCard {
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .ContactPageContainer {
+        flex-wrap: wrap;
+        /* align-items: center; */
+    }
+    .contactInfoCard {
+        width: 90%;
+        /* align-self: center; */
+    }
+
+    .ContactFormCard {
+        width: 90%;
+        margin-bottom: 5%;
     }
 
 }
