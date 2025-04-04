@@ -11,8 +11,8 @@ const NextArrow = (props) => {
   const { className, style, onClick } = props
   return (
     <div className={`${className} custom-arrow next-arrow`}
-    style={{ ...style, display: "block"}}
-    onClick={onClick} />
+      style={{ ...style, display: "block" }}
+      onClick={onClick} />
   )
 }
 
@@ -20,97 +20,97 @@ const PrevArrow = (props) => {
   const { className, style, onClick } = props
   return (
     <div className={`${className} custom-arrow prev-arrow`}
-    style={{ ...style, display: "block"}}
-    onClick={onClick} />
+      style={{ ...style, display: "block" }}
+      onClick={onClick} />
   )
 }
 
 const Caroussel = () => {
-    const settings = {
+  const settings = {
 
-      nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
 
-      dots: true,
-      speed: 500,
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      infinite: true,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      accessibility: true,
-      adaptiveHeight: true,
-  
-      responsive: [
-        {
-          breakpoint: 480,
-          settings: {slidesToShow: 1},
-        },
-        {
-          breakpoint: 768,
-          settings: {slidesToShow: 2},
-        },
-        {
-          breakpoint: 1024,
-          settings: { slidesToShow: 3},
-        },
-        
-      ],
-   
-    }
-  
-    
-    return (
-      
-    
-      <div className='content-carousel'>
-        
-        <div className='container-carousel'>
+    dots: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    accessibility: true,
+    adaptiveHeight: true,
+
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: { slidesToShow: 1 },
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 3 },
+      },
+
+    ],
+
+  }
+
+
+  return (
+
+
+    <div className='content-carousel'>
+
+      <div className='container-carousel'>
         <h2 className='carousel-title'>Adopte-moi !</h2>
         <div className='carousel-wrapper'>
           <Slider {...settings}>
-          
+
             {CarouselStyles.map((item) => (
-              
+
               <div key={item.id}>
-                
+
                 <div className='carousel-images'>
-                  <img src={item.src} alt={item.alt} className='carousel-image'/>
+                  <img src={item.src} alt={item.alt} className='carousel-image' />
                   <div className='carousel-overlay'>
                     <p className='carousel-name'>{item.alt}</p>
-                    <Link href="/Adoptables">
-                  <button className='carousel-button' type="button">{item.title}</button>
-                  </Link>
-                  </div>
+                    <Link to="/Adoptables">
+                      <button className='carousel-button' type="button">{item.title}</button>
+                    </Link>
                   </div>
                 </div>
-              
+              </div>
+
             ))}
 
           </Slider>
 
           <div className='links-button'>
-          <Link href="/Adoptables">
-                  <button className='dog-button' type='button'>Chiens</button>
-                  </Link>
-                  <Link href="/Adoptables">
-                  <button className='cat-button' type='button'>Chats</button>
-                  </Link>
-                  <Link href="/Adoptables">
-                  <button className='farm-button' type='button'>Animaux ferme</button>
-                  </Link>
-                  <Link href="/Adoptables">
-                  <button className='other-button' type='button'>Autres</button>
-                  </Link>
-                  <Link href="/Adoptables/Tips">
-                  <button className='tips-button' type='button'>Conseils adoption</button>
-                  </Link>
-                  </div>
-          </div>
+            <Link to="/Adoptables">
+              <button className='dog-button' type='button'>Chiens</button>
+            </Link>
+            <Link to="/Adoptables">
+              <button className='cat-button' type='button'>Chats</button>
+            </Link>
+            <Link to="/Adoptables">
+              <button className='farm-button' type='button'>Animaux ferme</button>
+            </Link>
+            <Link to="/Adoptables">
+              <button className='other-button' type='button'>Autres</button>
+            </Link>
+            <Link to="/Adoptables/Tips">
+              <button className='tips-button' type='button'>Conseils adoption</button>
+            </Link>
           </div>
         </div>
-      
-    )
-  }
-  
-  export default Caroussel;
+      </div>
+    </div>
+
+  )
+}
+
+export default Caroussel;
