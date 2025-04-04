@@ -1,0 +1,28 @@
+button {
+    background-color: orange;
+    padding: 1em;
+    border-radius: 0.5em;
+    width: fit-content;
+    align-self: center;
+    color: white; 
+}
+
+.RGPDWarning {
+    font-size: 0.8em;
+    width: 300px;
+    padding: 20px;
+    background-color: var(--bleu-clair-plain);
+    text-align: center;
+    color: white;
+
+
+}
+
+.popUpText {
+    font-size: 0.8em;
+}
+
+.popUpText:hover{
+color: var(--orange); 
+cursor: pointer;
+}

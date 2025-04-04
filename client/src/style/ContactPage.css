@@ -1,0 +1,51 @@
+.ContactPageContainer {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    margin-top: 5%;
+    color: var(--bleu-foncé);
+
+
+    .contactInfoCard {
+
+        width: 50%;
+        border-radius: 2px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+        h2 {
+            padding: 5%;
+        }
+
+        .contactInfo {
+            padding: 5%;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            .smallCharacters {
+                font-size: 0.7em;
+            }
+
+            .infoBlock {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+            }
+        }
+
+    }
+
+    .ContactFormCard {
+        /* background-color: rgb(196, 114, 149); */
+        width: 50%;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+        h2 {
+            padding: 5%;
+        }
+
+    }
+
+}
