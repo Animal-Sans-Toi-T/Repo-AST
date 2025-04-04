@@ -317,6 +317,7 @@
     .aLinkMedia{
         color: #375A9E;
         font-weight: 600;
+        margin: 0% 3% 0% 3%;
     }
     .aLinkMedia:hover{
         color: orange;
@@ -519,11 +520,12 @@
         padding-bottom: 3% ;
         padding-left: 3%;
     }
-    .aLiUlLinkMedia{
+    .aLinkMedia{
         color: #375A9E;
         font-weight: 600;
+        margin: 0% 3% 0% 3%;
     }
-    .aLiUlLinkMedia:hover{
+    .aLinkMedia:hover{
         color: orange;
         font-weight: 600;
     }
