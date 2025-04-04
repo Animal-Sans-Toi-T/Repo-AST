@@ -144,3 +144,26 @@
         flex-wrap: wrap-reverse;
     }
 }
+
+
+/* large screens /
+@media (min-width: 1440px)
+/ "normal" computer screens/
+@media (max-width: 1439px) and (min-width: 1024px) {
+
+/ laptops /
+@media (max-width: 1023px) {
+
+/ tablets landscape /
+@media (max-width: 1023px) and (min-width: 768px) {
+
+/ tablets/
+@media (max-width: 768px) {
+
+/ smartphones landscape/
+@media (max-width: 480px) {
+
+/ smartphones
+@media (min-width: 320px) {
+}
+*/
