@@ -14,6 +14,8 @@
     margin-left: 2em;
 }
 
+
+
 .header-nav-bar {
     width: 100%;
     display: flex;
@@ -40,8 +42,12 @@
 }
 
 
+
 /* large screens */
 @media (min-width: 1440px) {
+    .hamburger-react{
+        display: none;
+    }
     .header-logo {
         width: 250px;
     }
@@ -108,6 +114,7 @@
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column; 
+        justify-content: center;
         padding: 1.5em;
     }
 
@@ -127,6 +134,43 @@
     .signaler {
         font-size: 0.9em; 
         padding: 0.5em;
+    }
+
+    /* CODE MARIE */
+    .header-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 250px;
+        background-color: #375A9E;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding-top: 80px; /* pour éviter que le menu passe sous le header */
+        transition: left 0.3s ease-in-out;
+        z-index: 999;
+    }
+    .header-nav.open{
+        left: 0;
+    }
+    .header-nav-bar{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-left: 20px;
+    }
+    .hamburger-wrapper{
+        display: none;
+    }
+    .hamburger-react{
+        color: white;
+    }
+    /* CODE MARIE */
+    .hamburger-wrapper{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
     }
 }
 
