@@ -1,5 +1,8 @@
-const mariadb = require("mariadb");
-const dotenv = require("dotenv");
+import mariadb from "mariadb";
+import dotenv from"dotenv";
+
+// const mariadb = require("mariadb");
+// const dotenv = require("dotenv");
 
 dotenv.config();
 
@@ -14,4 +17,6 @@ const pool = mariadb.createPool({
     acquireTimeout: 10000,
 });
 
-module.exports = pool;
+// module.exports = pool;
+
+export default pool; 

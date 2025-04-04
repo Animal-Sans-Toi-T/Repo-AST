@@ -1,4 +1,6 @@
-const pool = require("../config/db");
+import pool from "../config/db.js"
+
+// const pool = require("../config/db");
 
 const Animal = {
   async getAllAnimals(limit = 10, offset = 0) {
@@ -34,4 +36,5 @@ const Animal = {
   // },
 };
 
-module.exports = Animal;
+// module.exports = Animal;
+export default Animal; 

@@ -1,6 +1,11 @@
-const cors = require("cors");
-const express = require("express");
-const animalRoutes = require("./routes/animalRoute");
+import cors from "cors";
+import express from "express";
+import animalRoutes from "./routes/animalRoute.js"
+
+
+// const cors = require("cors");
+// const express = require("express");
+// const animalRoutes = require("./routes/animalRoute");
 
 const app = express();
 const port = 3000;
@@ -42,4 +47,16 @@ app.use((err, req, res, next) => {
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
+});
+
+// -----------------------------------------NODEMAILER ----------------------------
+
+import emailRoutes from "./routes/emailRoutes.js";
+
+app.use("/apiemail", emailRoutes);
+
+//apparemment permet de mieux voir les requêtes qui échouent
+app.use((req, res, next) => {
+  console.log("404 NOT FOUND:", req.method, req.url);
+  res.status(404).send("Not Found");
 });

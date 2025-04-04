@@ -1,5 +1,9 @@
-const Animal = require("../models/animalModel");
-const Joi = require("joi");
+import Animal from "../models/animalModel.js";
+import Joi from "joi";
+
+
+// const Animal = require("../models/animalModel");
+// const Joi = require("joi");
 
 // Bibliothèque Joi pour gérer les inputs pluss facilement
 
@@ -38,4 +42,5 @@ const AnimalController = {
   // },
 };
 
-module.exports = AnimalController;
+// module.exports = AnimalController;
+export default AnimalController;
